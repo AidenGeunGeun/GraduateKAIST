@@ -13,7 +13,7 @@ export function Footer() {
       </div>
       <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">
         <a
-          href="https://buymeacoffee.com/kaistgrad"
+          href="https://buymeacoffee.com/aidengeungeun"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-text hover:text-accent"
@@ -22,7 +22,7 @@ export function Footer() {
         </a>
         <span className="hidden sm:inline">|</span>
         <a
-          href="https://github.com/yourusername/graduatekaist"
+          href="https://github.com/AidenGeunGeun/GraduateKAIST"
           target="_blank"
           rel="noopener noreferrer"
           className="text-text hover:text-accent"
