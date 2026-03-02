@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="KAIST 졸업요건 분석기 파비콘">
+  <rect width="64" height="64" rx="14" fill="#18181b" />
+  <path d="M8 24L32 14L56 24L32 34L8 24Z" fill="#34d399" />
+  <path d="M18 30V40C18 44.4 24.3 48 32 48C39.7 48 46 44.4 46 40V30L32 38L18 30Z" fill="#10b981" />
+  <circle cx="53" cy="28" r="3" fill="#fafafa" />
+</svg>
