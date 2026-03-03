@@ -28,6 +28,12 @@ const GRADE_TABLE: Record<string, GradeMeta> = {
 };
 
 export class Grade {
+  static readonly UNKNOWN = new Grade("UNKNOWN", {
+    points: null,
+    isGpaVisible: false,
+    earnsCreditOnPass: false,
+  });
+
   readonly display: string;
 
   readonly points: number | null;
@@ -43,14 +49,24 @@ export class Grade {
     this.earnsCreditOnPass = meta.earnsCreditOnPass;
   }
 
-  static from(raw: string): Grade {
+  static tryFrom(raw: string): Grade | null {
     const normalized = raw.trim().toUpperCase();
     const meta = GRADE_TABLE[normalized];
 
     if (!meta) {
-      throw new Error(`Invalid grade: ${raw}`);
+      return null;
     }
 
     return new Grade(normalized, meta);
+  }
+
+  static from(raw: string): Grade {
+    const grade = Grade.tryFrom(raw);
+
+    if (!grade) {
+      throw new Error(`Invalid grade: ${raw}`);
+    }
+
+    return grade;
   }
 }

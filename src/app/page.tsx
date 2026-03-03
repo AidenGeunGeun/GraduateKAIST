@@ -27,7 +27,7 @@ import { AuTracker as AuTrackerService } from "@/domain/services/AuTracker";
 import { GpaCalculator } from "@/domain/services/GpaCalculator";
 import { HssDistributionChecker } from "@/domain/services/HssDistributionChecker";
 import { RequirementAnalyzer } from "@/domain/services/RequirementAnalyzer";
-import type { AnalysisResult, AuResult, HssResult, TrackType } from "@/domain/types";
+import type { AnalysisResult, AuResult, HssResult, ParseWarning, TrackType } from "@/domain/types";
 
 interface DashboardState {
   track: TrackType;
@@ -40,10 +40,14 @@ interface DashboardState {
   hssResult: HssResult;
   currentGpaCredits: number;
   informationalNotices: string[];
+  parseWarnings: ParseWarning[];
+  parseSummary: {
+    totalRowsScanned: number;
+    rowsParsed: number;
+    rowsSkipped: number;
+  };
 }
 
-const PARSE_ERROR_MESSAGE =
-  "엑셀 파일을 읽을 수 없습니다. ERP 성적조회에서 다운로드한 파일인지 확인해주세요.";
 const ANALYSIS_ERROR_MESSAGE = "분석 중 오류가 발생했습니다. 다시 시도해주세요.";
 
 function sectionStyle(delay: number): CSSProperties {
@@ -77,19 +81,19 @@ export default function Home() {
       const { ExcelTranscriptParser } = await import("@/infrastructure/excel-parser/ExcelTranscriptParser");
       const parser = new ExcelTranscriptParser();
       const buffer = await selectedFile.arrayBuffer();
-      let records;
+      const parseResult = parser.parse(buffer);
 
-      try {
-        records = parser.parse(buffer);
-      } catch (_error) {
-        throw new Error("PARSE_ERROR");
+      if (parseResult.records.length === 0) {
+        if (parseResult.warnings.length > 0) {
+          setAnalyzeError(parseResult.warnings[0].message);
+        } else {
+          setAnalyzeError("유효한 과목 데이터를 찾을 수 없습니다.");
+        }
+        setDashboard(null);
+        return;
       }
 
-      if (records.length === 0) {
-        throw new Error("PARSE_ERROR");
-      }
-
-      const transcript = Transcript.from(records);
+      const transcript = Transcript.from(parseResult.records);
       const baseRequirementSet = getRequirements(admissionYear);
       const requirementSet = applyTrackModification(baseRequirementSet, selectedTrack);
       const analysisResult = RequirementAnalyzer.analyze(transcript, requirementSet);
@@ -135,14 +139,15 @@ export default function Home() {
         hssResult,
         currentGpaCredits,
         informationalNotices,
+        parseWarnings: parseResult.warnings,
+        parseSummary: {
+          totalRowsScanned: parseResult.totalRowsScanned,
+          rowsParsed: parseResult.rowsParsed,
+          rowsSkipped: parseResult.rowsSkipped,
+        },
       });
-    } catch (error) {
-      const message = error instanceof Error ? error.message : "분석 중 오류가 발생했습니다.";
-      if (message === "PARSE_ERROR") {
-        setAnalyzeError(PARSE_ERROR_MESSAGE);
-      } else {
-        setAnalyzeError(ANALYSIS_ERROR_MESSAGE);
-      }
+    } catch (_error) {
+      setAnalyzeError(ANALYSIS_ERROR_MESSAGE);
     } finally {
       setLoading(false);
     }
@@ -263,6 +268,24 @@ export default function Home() {
 
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
             <aside className="space-y-4 lg:sticky lg:top-4 lg:h-fit">
+              {dashboard.parseWarnings.length > 0 ? (
+                <div className="section-stagger" style={sectionStyle(0)}>
+                  <div className="rounded-lg border border-amber-500/40 bg-amber-500/10 p-3 text-xs text-amber-900 dark:text-amber-200">
+                    <p className="font-medium">
+                      총 {dashboard.parseSummary.totalRowsScanned}행 중 {dashboard.parseSummary.rowsParsed}개 과목 인식 (
+                      {dashboard.parseSummary.rowsSkipped}개 건너뜀)
+                    </p>
+                    <details className="mt-2">
+                      <summary className="cursor-pointer">세부 경고 {dashboard.parseWarnings.length}건 보기</summary>
+                      <ul className="mt-2 list-disc space-y-1 pl-4">
+                        {dashboard.parseWarnings.map((warning, index) => (
+                          <li key={`${warning.row}-${index}`}>{warning.message}</li>
+                        ))}
+                      </ul>
+                    </details>
+                  </div>
+                </div>
+              ) : null}
               <div className="section-stagger" style={sectionStyle(0)}>
                 <StatusHero
                   earned={dashboard.analysisResult.totalCreditsEarned}

@@ -21,7 +21,7 @@ export class Semester {
     this.isPreEnrollment = isPreEnrollment;
   }
 
-  static fromText(raw: string): Semester {
+  static tryFromText(raw: string): Semester | null {
     const normalized = raw.trim();
 
     if (normalized === "기이수 인정 학점") {
@@ -30,13 +30,23 @@ export class Semester {
 
     const match = normalized.match(REGULAR_SEMESTER_PATTERN);
     if (!match) {
-      throw new Error(`Invalid semester: ${raw}`);
+      return null;
     }
 
     const year = Number(match[1]);
     const season = match[2] as Season;
 
     return new Semester(year, season, false);
+  }
+
+  static fromText(raw: string): Semester {
+    const semester = Semester.tryFromText(raw);
+
+    if (!semester) {
+      throw new Error(`Invalid semester: ${raw}`);
+    }
+
+    return semester;
   }
 
   static compare(a: Semester, b: Semester): number {

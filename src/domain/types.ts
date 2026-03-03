@@ -1,3 +1,5 @@
+import type { CourseRecord } from "@/domain/models/CourseRecord";
+
 export type Season = "봄" | "여름" | "가을" | "겨울";
 
 export type RetakeFlag = "N" | "Y" | "Z";
@@ -80,6 +82,19 @@ export interface Warning {
   type: WarningType;
   message: string;
   courseCode?: string;
+}
+
+export interface ParseWarning {
+  row: number;
+  message: string;
+}
+
+export interface ParseResult {
+  records: CourseRecord[];
+  warnings: ParseWarning[];
+  totalRowsScanned: number;
+  rowsParsed: number;
+  rowsSkipped: number;
 }
 
 export interface AnalysisResult {

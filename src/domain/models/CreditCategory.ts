@@ -34,14 +34,14 @@ export class CreditCategory {
     this.value = value;
   }
 
-  static from(raw: string): CreditCategory {
+  static tryFrom(raw: string): CreditCategory | null {
     const normalized = raw.trim();
 
     if (normalized.startsWith(HSS_PREFIX)) {
       const subcategory = normalized.match(/\(([^)]+)\)/)?.[1] ?? "";
       const mapped = HSS_SUBCATEGORY_MAP[subcategory];
       if (!mapped) {
-        throw new Error(`Invalid HSS category: ${raw}`);
+        return null;
       }
 
       return new CreditCategory(mapped);
@@ -49,10 +49,20 @@ export class CreditCategory {
 
     const mapped = RAW_CATEGORY_MAP[normalized];
     if (!mapped) {
-      throw new Error(`Invalid credit category: ${raw}`);
+      return null;
     }
 
     return new CreditCategory(mapped);
+  }
+
+  static from(raw: string): CreditCategory {
+    const category = CreditCategory.tryFrom(raw);
+
+    if (!category) {
+      throw new Error(`Invalid credit category: ${raw}`);
+    }
+
+    return category;
   }
 
   toGyeyol(): Gyeyol | null {
