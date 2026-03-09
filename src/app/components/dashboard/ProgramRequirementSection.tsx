@@ -24,8 +24,26 @@ function badgeVariant(status: ProgramSupportInfo["status"]): "supported" | "part
 }
 
 export function ProgramRequirementSection({ support, analysis }: ProgramRequirementSectionProps) {
-  if (!support || !analysis) {
+  if (!support) {
     return null;
+  }
+
+  if (!analysis) {
+    return (
+      <section className="rounded-xl border border-border bg-surface p-4">
+        <div className="flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <h2 className="text-base font-semibold text-text">학과별 전공 분석 상태</h2>
+            <p className="mt-1 text-xs text-text-muted">{support.message}</p>
+          </div>
+          <Badge variant={badgeVariant(support.status)}>{support.title}</Badge>
+        </div>
+        <div className="mt-4 rounded-lg border border-border bg-surface-soft p-3 text-xs text-text-muted">
+          이 학과는 아직 전공 규칙이 정리되지 않아 세부 분석을 제공하지 못합니다.
+          해당 학과 학사팀 또는 포털에서 직접 확인하세요.
+        </div>
+      </section>
+    );
   }
 
   return (
