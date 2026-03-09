@@ -32,7 +32,7 @@ export function DepartmentSelector({ value, options, onChange }: DepartmentSelec
           </option>
         ))}
       </select>
-      <p className="text-xs text-text-muted">AE, ME, CS, EE는 공식 문서 인벤토리를 수집했지만 현재 앱에서는 모두 공통 이수요건만 분석합니다.</p>
+      <p className="text-xs text-text-muted">AE, ME, CS, EE는 학과별 전공 분석을 지원합니다.</p>
     </div>
   );
 }

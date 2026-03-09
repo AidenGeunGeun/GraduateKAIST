@@ -9,6 +9,12 @@ interface AuTrackerProps {
 
 const ORDER = ["인성/리더십", "즐거운", "신나는"] as const;
 
+const DISPLAY_LABELS: Record<(typeof ORDER)[number], string> = {
+  "인성/리더십": "인성/리더십",
+  즐거운: "즐대생",
+  신나는: "신대생",
+};
+
 export function AuTracker({ auResult }: AuTrackerProps) {
   return (
     <section className="rounded-xl border border-border bg-surface p-3">
@@ -24,7 +30,7 @@ export function AuTracker({ auResult }: AuTrackerProps) {
           return (
             <div key={key} className="space-y-1">
               <div className="flex items-center justify-between text-xs">
-                <span className="text-text-muted">{key}</span>
+                <span className="text-text-muted">{DISPLAY_LABELS[key]}</span>
                 <span className={value.fulfilled ? "text-success" : "text-warning"}>
                   {value.earned}/{value.required} {value.fulfilled ? "✓" : "✗"}
                 </span>
@@ -34,7 +40,7 @@ export function AuTracker({ auResult }: AuTrackerProps) {
                 max={value.required}
                 showPercent={false}
                 tone={value.fulfilled ? "success" : "warning"}
-                label={`${key} AU 진행률`}
+                label={`${DISPLAY_LABELS[key]} AU 진행률`}
               />
             </div>
           );

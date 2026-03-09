@@ -39,7 +39,7 @@ export function ProgramRequirementSection({ support, analysis }: ProgramRequirem
       </div>
 
       <p className="mt-3 text-[11px] text-text-muted">
-        데이터셋 {support.datasetVersion} · 마지막 생성 {support.lastGeneratedAt.slice(0, 10)}
+        버전 {support.datasetVersion} · {support.lastGeneratedAt.slice(0, 10)} 기준
       </p>
 
       {analysis ? (

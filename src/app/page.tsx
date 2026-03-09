@@ -142,23 +142,23 @@ export default function Home() {
       const informationalNotices =
         analysisResult.programSupport?.status === "supported"
           ? [
-              "공통학사요람 + 선택한 학과의 오프라인 데이터셋 기준입니다. 최종 졸업 판정은 학과/학사팀 확인이 필요합니다.",
+              "학사요람 기준 분석 결과입니다. 최종 졸업 판정은 학과 또는 학사팀에 확인하세요.",
               ...analysisResult.programSupport.knownLimitations,
               "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
             ]
           : [
               analysisResult.programSupport?.message ??
-                "선택한 조합은 공통학사요람 기준으로만 분석합니다. 학과별 세부 요건은 학과 이수요건을 참조하세요.",
+                "공통 졸업요건만 분석합니다. 학과별 전공 요건은 학과에 직접 확인하세요.",
               "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
             ];
 
       if (requirementSet.hasHssCoreTypeRequirement) {
-        informationalNotices.push("인선 핵심/융합/일반 유형 구분은 성적표에서 확인할 수 없습니다.");
+        informationalNotices.push("인선 핵심/융합/일반 유형 구분은 성적표에 나오지 않아 자동 확인이 안 됩니다.");
       }
 
       if (admissionYear === 2025) {
         informationalNotices.push(
-          "2025학번 인성/리더십 I/II + III/IV 분배 요건은 성적표만으로 확인할 수 없습니다.",
+          "2025학번은 인성/리더십을 I·II 중 1개, III·IV 중 1개 이수해야 하지만 성적표만으로는 구분이 안 됩니다.",
         );
       }
 
@@ -243,10 +243,10 @@ export default function Home() {
                               : "danger"
                     }
                   >
-                    {supportPreview?.title ?? "1차 지원 범위"}
+                    {supportPreview?.title ?? "지원 범위"}
                   </Badge>
                   <span className="text-text">
-                    {supportPreview?.message ?? "현재는 공통 이수요건 분석이 기본이며, 학과 규칙은 공식 소스 코퍼스를 정리 중입니다."}
+                    {supportPreview?.message ?? "AE, ME, CS, EE 학과의 전공 분석을 지원합니다. 기타 학과는 공통 요건만 확인합니다."}
                   </span>
                 </div>
               </div>

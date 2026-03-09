@@ -64,10 +64,10 @@ export function CategoryGrid({
               {auResult.categories["인성/리더십"].required}
             </span>
             <span>
-              즐거운 {auResult.categories.즐거운.earned}/{auResult.categories.즐거운.required}
+              즐대생 {auResult.categories.즐거운.earned}/{auResult.categories.즐거운.required}
             </span>
             <span>
-              신나는 {auResult.categories.신나는.earned}/{auResult.categories.신나는.required}
+              신대생 {auResult.categories.신나는.earned}/{auResult.categories.신나는.required}
             </span>
           </div>
         </CategoryCard>

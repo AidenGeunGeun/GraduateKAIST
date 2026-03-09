@@ -8,7 +8,7 @@ export function Footer() {
         <span className="hidden sm:inline">|</span>
         <span>모든 데이터는 브라우저에서만 처리됩니다</span>
         <span className="inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[11px] text-accent">
-          공통 분석 제공 · 학과 규칙 코퍼스 정리 중
+          AE · ME · CS · EE 전공 분석 지원
         </span>
       </div>
       <div className="mt-2 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3">

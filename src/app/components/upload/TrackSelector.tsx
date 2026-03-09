@@ -26,7 +26,7 @@ export function TrackSelector({ value, onChange }: TrackSelectorProps) {
             </option>
           ))}
         </select>
-      <p className="text-xs text-text-muted">복수전공은 공통 인선/연구 완화를 반영하고, 모든 트랙의 학과별 세부 규칙은 공식 소스 정리 전까지 공통 분석만 제공합니다.</p>
+      <p className="text-xs text-text-muted">복수전공은 인선(12학점)·연구(면제) 완화가 반영됩니다. 자유융합전공은 전공학점 산정 방식이 달라 공통 요건만 분석합니다.</p>
     </div>
   );
 }

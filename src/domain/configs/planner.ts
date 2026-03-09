@@ -100,7 +100,7 @@ export function getProgramSupport(selection: PlannerSelection): ProgramSupportIn
       selection,
       status: "common-only",
       title: `${getDepartmentLabel(selection.department)} 공통 분석`,
-      message: "선택한 학과는 아직 공식 학과 규칙 코퍼스가 없어 공통 이수요건만 분석합니다.",
+      message: "선택한 학과는 아직 전공 규칙이 정리되지 않아 공통 요건만 분석합니다.",
       knownLimitations: [],
       datasetVersion: supportManifestData.datasetVersion,
       lastGeneratedAt: supportManifestData.generatedAt,
@@ -113,7 +113,7 @@ export function getProgramSupport(selection: PlannerSelection): ProgramSupportIn
       selection,
       status: "common-only",
       title: `${getDepartmentLabel(selection.department)} ${selection.track} 공통 분석`,
-      message: "자유융합전공은 아직 공식 규칙 코퍼스가 충분하지 않아 공통 이수요건만 분석합니다.",
+      message: "자유융합전공은 2개 이상 학사조직에서 12학점 이상을 이수해야 하며, 이 조건은 성적표만으로 자동 확인이 어려워 공통 요건만 분석합니다.",
       knownLimitations: [],
       datasetVersion: supportManifestData.datasetVersion,
       lastGeneratedAt: supportManifestData.generatedAt,
@@ -127,7 +127,7 @@ export function getProgramSupport(selection: PlannerSelection): ProgramSupportIn
       selection,
       status: "common-only",
       title: `${getDepartmentLabel(selection.department)} ${selection.track} 공통 분석`,
-      message: "선택한 학번/학과/프로그램 조합은 아직 공식 학과 규칙이 정규화되지 않아 공통 이수요건만 분석합니다.",
+      message: "선택한 조합은 아직 전공 규칙이 정리되지 않아 공통 요건만 분석합니다.",
       knownLimitations: [],
       datasetVersion: supportManifestData.datasetVersion,
       lastGeneratedAt: supportManifestData.generatedAt,
@@ -147,10 +147,10 @@ export function getProgramSupport(selection: PlannerSelection): ProgramSupportIn
           : `${displayName} 공통 분석`,
     message:
       supportEntry.supportStatus === "supported"
-        ? "선택한 조합은 공식 소스 기반 데이터셋으로 학과별 필수/전공 인정학점을 함께 분석합니다."
+        ? "학사요람 기반으로 학과 전공 필수과목과 전공학점을 함께 분석합니다."
         : supportEntry.supportStatus === "partial"
-          ? "선택한 조합은 일부 규칙만 정규화되어 있어 수동 검토 경고와 함께 제공합니다."
-          : "선택한 조합은 공식 문서 인벤토리만 확보된 상태라 현재는 공통 이수요건만 분석합니다.",
+          ? "일부 전공 규칙만 확인 가능합니다. 수동 검토가 필요한 항목은 별도로 표시됩니다."
+          : "아직 학과 전공 규칙이 정리되지 않아 공통 요건만 분석합니다.",
     knownLimitations: supportEntry.knownLimitations,
     datasetVersion: supportManifestData.datasetVersion,
     lastGeneratedAt: supportManifestData.generatedAt,
