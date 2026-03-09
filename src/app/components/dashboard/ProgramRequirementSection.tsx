@@ -38,9 +38,7 @@ export function ProgramRequirementSection({ support, analysis }: ProgramRequirem
         <Badge variant={badgeVariant(support.status)}>{support.title}</Badge>
       </div>
 
-      <p className="mt-3 text-[11px] text-text-muted">
-        버전 {support.datasetVersion} · {support.lastGeneratedAt.slice(0, 10)} 기준
-      </p>
+      {null}
 
       {analysis ? (
         <div className="mt-4 space-y-4">
