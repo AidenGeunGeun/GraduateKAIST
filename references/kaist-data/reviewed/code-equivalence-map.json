@@ -1,0 +1,25 @@
+{
+  "description": "Course code equivalence map: old 3-digit codes <-> new 5-digit codes. Extracted from reviewed interpretation DB by matching slot IDs across year groups.",
+  "generatedFrom": "Reviewed interpretation slot-ID matching across pre-2025 and 2025 year-group slices",
+  "pairs": [
+    { "old": "AE208", "new": "AE20008" },
+    { "old": "AE210", "new": "AE21000" },
+    { "old": "AE220", "new": "AE22000" },
+    { "old": "AE300", "new": "AE30000" },
+    { "old": "AE307", "new": "AE30007" },
+    { "old": "AE330", "new": "AE33000" },
+    { "old": "AE400", "new": "AE40000" },
+    { "old": "CS204", "new": "CS.20004" },
+    { "old": "CS206", "new": "CS.20006" },
+    { "old": "CS300", "new": "CS.30000" },
+    { "old": "CS311", "new": "CS.30101" },
+    { "old": "CS320", "new": "CS.30200" },
+    { "old": "CS330", "new": "CS.30300" },
+    { "old": "EE305", "new": "EE.30005" },
+    { "old": "EE405", "new": "EE.40005" },
+    { "old": "ME200", "new": "ME.20000" },
+    { "old": "ME303", "new": "ME.20005" },
+    { "old": "ME340", "new": "ME.30040" },
+    { "old": "ME400", "new": "ME.40000" }
+  ]
+}

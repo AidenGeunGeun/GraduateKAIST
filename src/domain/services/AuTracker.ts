@@ -6,7 +6,7 @@ function classifyAuSubcategory(nameKo: string): AuCategoryName | "PE_CONVERT" | 
     return "PE_CONVERT";
   }
 
-  if (/인성\s*리더십|인성리더십/.test(nameKo)) {
+  if (/인성[\s/]*리더십/.test(nameKo)) {
     return "인성/리더십";
   }
 

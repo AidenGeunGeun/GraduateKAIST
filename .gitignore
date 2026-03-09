@@ -42,3 +42,6 @@ next-env.d.ts
 
 # code-intel local index
 .code-intel/
+
+# stray test files
+ae-test.pdf

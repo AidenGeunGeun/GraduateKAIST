@@ -1,0 +1,138 @@
+{
+  "version": 3,
+  "sources": [
+    {
+      "sourceId": "bulletin-crawl-phase0-1",
+      "kind": "official-bulletin-crawl",
+      "title": "KAIST bulletin crawl manifest (Wave 1.5 hardened)",
+      "referencePath": "references/kaist-data/raw/bulletin-crawl-manifest.json",
+      "notes": "Collected with agent-browser from the verified initPageWork.do SSO entry. Records the refreshed 2019-2025 four-department crawl scope, 2019 re-check outcomes, duplicate-iframe resolutions, and remaining source-boundary caveats."
+    },
+    {
+      "sourceId": "bulletin-inventory-phase0-1",
+      "kind": "official-bulletin-inventory",
+      "title": "KAIST bulletin department document inventory (Wave 1.5 matrix)",
+      "referencePath": "references/kaist-data/raw/bulletin-document-inventory.json",
+      "notes": "Machine-readable 2019-2025 slot matrix for AE/ME/CS/EE. Every year x department x document-type slot is labeled captured or missing with reconciliation notes for the former manual-recheck cases."
+    },
+    {
+      "sourceId": "streamdocs-metadata-phase0-1",
+      "kind": "official-streamdocs-metadata",
+      "title": "KAIST StreamDocs metadata summaries (Wave 1.5 refreshed)",
+      "referencePath": "references/kaist-data/raw/streamdocs-metadata.json",
+      "notes": "Official StreamDocs metadata summaries fetched from the documented /documents/<streamdocsId>/document endpoint for the current bulletin inventory after the Wave 1.5 re-checks."
+    },
+    {
+      "sourceId": "erp-query-inventory-phase0-1",
+      "kind": "official-erp-snapshot",
+      "title": "KAIST ERP course catalog query inventory (Wave 1.5 clarified)",
+      "referencePath": "references/kaist-data/raw/erp-query-inventory.json",
+      "notes": "Spring 2025 prefix-based inventory plus fall-semester recheck attempts. Preserves broad query provenance, row-evidence limits, and the fall-semester instability without promoting ERP labels to graduation truth."
+    },
+    {
+      "sourceId": "erp-course-code-snapshots-phase0-1",
+      "kind": "official-erp-snapshot",
+      "title": "KAIST ERP exact course-code snapshots (2025 spring)",
+      "referencePath": "references/kaist-data/raw/erp-course-code-snapshots-2025-spring.json",
+      "notes": "Row-level ERP snapshots for the prototype in-scope course list, captured with exact course-code filters. Preserves full visible rows, zero-result attempts, and year-selector quirks for auditability."
+    },
+    {
+      "sourceId": "erp-row-evidence-map-wave1",
+      "kind": "official-erp-provenance-map",
+      "title": "KAIST ERP row-evidence map (Wave 1.5 clarified)",
+      "referencePath": "references/kaist-data/raw/erp-row-evidence-map.json",
+      "notes": "Links each four-department spring prefix snapshot to the exact course-code row artifact and explicitly grades the unresolved fall 2025 semester-instability as supporting-only evidence."
+    },
+    {
+      "sourceId": "source-truth-reconciliation-wave1-5",
+      "kind": "source-truth-reconciliation",
+      "title": "Wave 1.5 source-truth reconciliation artifact",
+      "referencePath": "references/kaist-data/raw/source-truth-reconciliation.json",
+      "notes": "Machine-readable reconciliation artifact for Wave 1.5. Distinguishes resolved duplicate captures, confirmed-missing 2019 slots, newly captured 2019 CS/EE tabs, and ERP evidence that remains supporting-only."
+    },
+    {
+      "sourceId": "reviewed-interpretation-wave2-ae",
+      "kind": "reviewed-interpretation",
+      "title": "Wave 2 reviewed AE interpretation database",
+      "referencePath": "references/kaist-data/reviewed/ae.reviewed.json",
+      "notes": "Authoritative reviewed AE rule interpretation for the 2019-2025 undergraduate scope, with provenance-linked bulletin excerpts and honest support boundaries."
+    },
+    {
+      "sourceId": "reviewed-interpretation-wave2-me",
+      "kind": "reviewed-interpretation",
+      "title": "Wave 2 reviewed ME interpretation database",
+      "referencePath": "references/kaist-data/reviewed/me.reviewed.json",
+      "notes": "Authoritative reviewed ME rule interpretation for the 2019-2025 undergraduate scope, with provenance-linked bulletin excerpts and honest support boundaries."
+    },
+    {
+      "sourceId": "reviewed-interpretation-wave2-cs",
+      "kind": "reviewed-interpretation",
+      "title": "Wave 2 reviewed CS interpretation database",
+      "referencePath": "references/kaist-data/reviewed/cs.reviewed.json",
+      "notes": "Authoritative reviewed CS rule interpretation for the 2019-2025 undergraduate scope, with provenance-linked bulletin excerpts and honest support boundaries."
+    },
+    {
+      "sourceId": "reviewed-interpretation-wave2-ee",
+      "kind": "reviewed-interpretation",
+      "title": "Wave 2 reviewed EE interpretation database",
+      "referencePath": "references/kaist-data/reviewed/ee.reviewed.json",
+      "notes": "Authoritative reviewed EE rule interpretation for the 2019-2025 undergraduate scope, with provenance-linked bulletin excerpts and honest support boundaries."
+    },
+    {
+      "sourceId": "reviewed-interpretation-wave2-notes",
+      "kind": "reviewed-interpretation-notes",
+      "title": "Wave 2 reviewed interpretation notes",
+      "referencePath": "references/kaist-data/reviewed/interpretation-notes.md",
+      "notes": "Human-readable department notes, year-boundary summaries, and acceptance examples for the Wave 2 reviewed interpretation database."
+    },
+    {
+      "sourceId": "domain-interpretation-phase0-1",
+      "kind": "domain-interpretation",
+      "title": "Phase 0-1 domain interpretation skeleton",
+      "referencePath": "references/kaist-data/raw/domain-interpretation-skeleton.md",
+      "notes": "Support boundary matrix, ubiquitous language, known unknowns, and the next safe implementation step after corpus acquisition."
+    },
+    {
+      "sourceId": "erp-course-snapshot-2025",
+      "kind": "legacy-summary",
+      "title": "Legacy KAIST ERP course offering snapshot",
+      "referencePath": "references/graduation-requirements-2019-2025.md:62",
+      "notes": "Pre-phase curated summary used by the prototype dataset. Useful as exploratory context only; not sufficient support backing on its own."
+    },
+    {
+      "sourceId": "ae-major-doc-2019-2025",
+      "kind": "legacy-summary",
+      "title": "Legacy AE graduation requirement notes",
+      "referencePath": "references/requirements.md:79",
+      "notes": "Pre-phase condensed notes. Kept for auditability of the prototype dataset, but no longer treated as sufficient evidence for supported claims."
+    },
+    {
+      "sourceId": "me-major-doc-2019-2025",
+      "kind": "legacy-summary",
+      "title": "Legacy ME graduation requirement notes",
+      "referencePath": "references/product-spec.md:1",
+      "notes": "Pre-phase curated summary for the prototype planner. Not official-source-backed enough for supported claims."
+    },
+    {
+      "sourceId": "cs-major-doc-2019-2025",
+      "kind": "legacy-summary",
+      "title": "Legacy CS graduation requirement notes",
+      "referencePath": "references/product-spec.md:1",
+      "notes": "Pre-phase curated summary for the prototype planner. Not official-source-backed enough for supported claims."
+    },
+    {
+      "sourceId": "ee-major-doc-2019-2025",
+      "kind": "legacy-summary",
+      "title": "Legacy EE graduation requirement notes",
+      "referencePath": "references/product-spec.md:1",
+      "notes": "Pre-phase curated summary for the prototype planner. Not official-source-backed enough for supported claims."
+    },
+    {
+      "sourceId": "curated-overrides-v1",
+      "kind": "legacy-override-layer",
+      "title": "Department planner curated overrides",
+      "referencePath": "references/kaist-data/overrides/program-overrides.json",
+      "notes": "Legacy prototype overrides retained for auditability. They may interpret earlier summaries but do not replace official-source acquisition."
+    }
+  ]
+}

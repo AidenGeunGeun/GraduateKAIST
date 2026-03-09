@@ -1,0 +1,405 @@
+{
+  "datasetVersion": "2026.03.09-wave3-code-equivalence",
+  "generatedAt": "2026-03-09T00:00:00.000Z",
+  "entries": [
+    {
+      "department": "AE",
+      "admissionYearRange": [
+        2019,
+        2019
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "common-only",
+      "knownLimitations": [
+        "2019 AE requirement/list/overview bulletin slots are confirmed missing in the verified workflow.",
+        "No official-source-backed AE rule interpretation is encoded for 2019 admissions.",
+        "Runtime remains common-only because no official-source-backed AE rule interpretation is encoded for 2019 admissions."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ae",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "AE",
+      "admissionYearRange": [
+        2020,
+        2021
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "심화전공 500단위 상호인정 과목은 수동 검토가 필요하다."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ae",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "AE",
+      "admissionYearRange": [
+        2022,
+        2022
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "AE Co-op substitution depends on internship timing and remains a manual-review edge case."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ae",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "AE",
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "2024 research-credit clarifications and semester-specific internship timing still need manual-review handling in a future analyzer wave."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ae",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "AE",
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "The 2025 doc introduces a semester-specific 2024-fall entrant research-credit edge case that is manual-review-only in the current annual admission-year model."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ae",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2019,
+        2019
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2020,
+        2020
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2021,
+        2021
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "URP/타학과 개별연구/IS500 elective counting needs analyzer-side provenance checks."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2022,
+        2022
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "SoC Co-op retroactive free-elective handling needs analyzer-side course-history checks."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "SoC Co-op 21-credit replacement and CoE 6-credit caps both need transcript-aware implementation.",
+        "2024 optional information-security specialization remains note-level only in this wave."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "CS",
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "2025 uses the dotted code family and still needs analyzer-side code normalization and capstone-pool implementation."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-cs",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "EE",
+      "admissionYearRange": [
+        2019,
+        2021
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ee",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "EE",
+      "admissionYearRange": [
+        2022,
+        2022
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "EE Co-op retroactive 자유선택 처리 needs course-history checks."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ee",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "EE",
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "EE Co-op 21-credit rule depends on program-side evaluation and remains manual-review-only."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ee",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "EE",
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "2025 uses the dotted code family and still needs analyzer-side code normalization."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-ee",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "ME",
+      "admissionYearRange": [
+        2019,
+        2019
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "common-only",
+      "knownLimitations": [
+        "2019 ME requirement/list/overview slots are confirmed missing in the verified workflow.",
+        "No official-source-backed ME rule interpretation is encoded for 2019 admissions.",
+        "Runtime remains common-only because no official-source-backed ME rule interpretation is encoded for 2019 admissions."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-me",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "ME",
+      "admissionYearRange": [
+        2020,
+        2020
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "심화전공 15학점은 일반전공 이수과목 제외 계산이라 future analyzer work is still needed."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-me",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "ME",
+      "admissionYearRange": [
+        2021,
+        2022
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "외부 전공학점 인정은 CoE 3학점 제한 등 세부 credit-origin 계산이 필요하다."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-me",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "ME",
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "ME Co-op 2023 grandfathering depends on internship start term and remains manual-review-only in an annual admission-year model."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-me",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    },
+    {
+      "department": "ME",
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "supportedProgramTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "supportStatus": "supported",
+      "knownLimitations": [
+        "2025 uses the dotted code family and still needs analyzer-side course-code normalization work."
+      ],
+      "sourceRefs": [
+        "reviewed-interpretation-wave2-me",
+        "reviewed-interpretation-wave2-notes"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2433 @@
+{
+  "version": 1,
+  "department": "AE",
+  "displayName": "항공우주공학과",
+  "reviewedAt": "2026-03-09",
+  "scope": {
+    "admissionYearRange": [
+      2019,
+      2025
+    ],
+    "programTypes": [
+      "심화전공",
+      "복수전공",
+      "부전공"
+    ]
+  },
+  "yearBoundaryAnalysis": [
+    {
+      "admissionYearRange": [
+        2019,
+        2021
+      ],
+      "status": "reviewed",
+      "reason": "2019-2021 AE admissions all fall under the 2016학년도 이후 section: 136 total credits, 42 major credits, 21 required major credits, 18 심화 credits, 18 부전공 credits including 9 required-major credits, and no CoE/AE Co-op policy. The 2019 bulletin year tree does not expose AE as a department node, but the official requirement document from any captured year (e.g. 2020, 2025) covers 2019 admissions under the same 2016학년도 이후 rule section.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2020:AE:교과목이수요건",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2016학년도 이후 입학 학사과정용 / ▣ 전공: 42학점 이상 이수 / 전공필수 21학점 / 전공선택 21학점 / ▣ 심화전공: 18학점 이상 이수"
+        },
+        {
+          "slotKey": "2020:AE:교과목이수요건",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "▣ 부전공: 18학점 이상 이수 - 전공필수 9학점을 포함 / ▣ 복수전공: 42학점 이상 이수 - 전공필수 21학점 포함"
+        },
+        {
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 1,
+          "excerpt": "2015학년도 이전 입학 / 2016학년도 이후 입학 / 2023학년도 이후 입학 — all three admission-year sections present in a single document, confirming 2019 admissions are governed by the 2016학년도 이후 section"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2022,
+        2022
+      ],
+      "status": "reviewed",
+      "reason": "2022 keeps the 42-credit major structure but adds the 2022-onward basic-selection note, CoE491 elective recognition, and the first AE Co-op rule set.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "학과 지정 기초선택 ... 2022년 이후 입학생부터 적용 / CoE491코드를 3학점까지 전공선택으로 인정"
+        },
+        {
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "AE Co-op 1 ... 최대 9학점에 한해 졸업연구(3), 전공선택(3), 자유선택(3)으로 대체 인정"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "status": "reviewed",
+      "reason": "2023 introduces a new 2023학년도 이후 section with 138 total credits while keeping 42 AE major credits. It also upgrades AE Co-op to the 21-credit replacement pattern. 2024 adds a research-credit clarification, but the core 2023+ AE rule structure and old course-code family remain the same.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "AE Co-op 1 ... 최대 21학점에 한해 졸업연구(3), 전공선택(6), 자유선택(12)으로 대체 인정 가능함."
+        },
+        {
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "(2023학년도 이후 입학생 학사과정용) ▣ 졸업이수학점: 총 138학점 이상 이수"
+        },
+        {
+          "slotKey": "2024:AE:교과목이수요건",
+          "year": 2024,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "졸업연구(대체과목 포함)는 최대 3학점까지 졸업 이수 학점으로 인정함"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "status": "reviewed",
+      "reason": "2025 preserves the 2023+ AE structure but renumbers undergraduate courses into the new 5-digit code family, making 2025 a distinct machine-readable slice.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "2023학년도 이후 입학 학사과정용 / 총 138학점 이상 이수 / AE21000, AE22000 ... new code family"
+        },
+        {
+          "slotKey": "2025:AE:교과목일람표",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 AE21000, AE22000, AE30000, AE20008, AE30007, AE33000, AE40000"
+        }
+      ]
+    }
+  ],
+  "ruleSets": [
+    {
+      "id": "ae-2020-2021",
+      "label": "2020-2021 AE admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2020:AE:교과목이수요건",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "▣ 전공: 42학점 이상 / 전공필수 21학점 / 전공선택 21학점 / AE210은 ME211로 대체 가능"
+        },
+        {
+          "id": "advanced-major",
+          "slotKey": "2020:AE:교과목이수요건",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "▣ 심화전공: 18학점 이상 / 표 기재 교과목 + 500단위 상호인정 교과목 인정"
+        },
+        {
+          "id": "minor-double-research",
+          "slotKey": "2020:AE:교과목이수요건",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18학점 이상(전공필수 9학점 포함), 복수전공 42학점 이상(전공필수 21학점 포함), 연구 3학점"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2020:AE:교과목일람표",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 AE210, AE220, AE300, AE208, AE307, AE330, AE400"
+        },
+        {
+          "id": "list-equivalencies",
+          "slotKey": "2020:AE:교과목일람표",
+          "year": 2020,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 5,
+          "excerpt": "AE210<-ME211, AE230<-ME231, AE311<-ME311, AE370<-ME301"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한 총 전공 이수학점 규칙이다."
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공선택으로 취급되는 AE 전공과목 기준 해석이다."
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ],
+              "requiredCredits": 18,
+              "eligibleCourseCodes": [
+                "AE321",
+                "AE331",
+                "AE401",
+                "AE405",
+                "AE409",
+                "AE410",
+                "AE420",
+                "AE435",
+                "AE450",
+                "AE455",
+                "AE480",
+                "AE492",
+                "AE493"
+              ],
+              "notes": [
+                "표 기재 과목 기준. 500단위 상호인정 과목은 수동 확인이 필요하다."
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "AE490",
+                "AE401"
+              ],
+              "notes": [
+                "졸업연구는 AE401 항공우주 시스템 설계 II로 대체 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            },
+            {
+              "id": "ae230-me231",
+              "label": "AE230 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME231"
+              ],
+              "canonicalCourseCode": "AE230",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae311-me311",
+              "label": "AE311 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME311"
+              ],
+              "canonicalCourseCode": "AE311",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae370-me301",
+              "label": "AE370 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME301"
+              ],
+              "canonicalCourseCode": "AE370",
+              "appliesTo": "major-elective"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-500-level",
+              "label": "심화전공 500단위 상호인정",
+              "status": "manual-review-only",
+              "reason": "심화전공 표 외에 500단위 이상 상호인정 전공과목을 심화전공으로 인정한다고만 적혀 있어, 실제 인정 과목 목록과 승인 상태를 문서만으로 완결적으로 산정할 수 없다.",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "2020-2021 admissions use the 2016학년도 이후 AE section with 42 major credits and 21 required-major credits.",
+            "The official list doc identifies the seven AE 전공필수 slots explicitly."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "major-core-seven",
+              "scenario": "AE210, AE220, AE300, AE208, AE307, AE330, AE400을 모두 이수한 경우",
+              "expectedInterpretation": "전공필수 21학점 슬롯은 충족으로 본다.",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae210-substitution",
+              "scenario": "AE210 대신 ME211을 이수한 경우",
+              "expectedInterpretation": "열역학 슬롯은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한다. 타 학사조직 전공과목은 최대 6학점 중복 인정 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            }
+          ],
+          "manualReviewOnlyCases": [],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major-required",
+              "scenario": "AE 전공필수 21학점과 총 42학점을 이수한 경우",
+              "expectedInterpretation": "AE 복수전공 핵심 요건은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 18,
+              "eligiblePrefixes": [
+                "AE"
+              ]
+            },
+            {
+              "id": "minor-required-pool",
+              "label": "전공필수군 9학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ],
+              "requiredCredits": 9,
+              "eligibleCourseCodes": [
+                "AE210",
+                "AE220",
+                "AE300",
+                "AE208",
+                "AE307",
+                "AE330",
+                "AE400"
+              ],
+              "notes": [
+                "문구는 전공필수 9학점을 포함하도록 요구하므로, 전공필수 과목군에서 최소 9학점 이수로 해석한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-credit-pool"
+            }
+          ],
+          "manualReviewOnlyCases": [],
+          "interpretationNotes": [
+            "AE 부전공은 고정된 개별 슬롯 목록이 아니라 전공필수군 9학점 포함 규칙으로 읽는 편이 문서와 가장 잘 맞는다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "minor-required-pool",
+              "scenario": "AE 전공필수군에서 3과목(9학점)과 AE 전공과목 총 18학점을 이수한 경우",
+              "expectedInterpretation": "AE 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae-2022",
+      "label": "2022 AE admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "기초선택 9학점(2022년 이후 입학생부터 적용), 전공 42학점, CoE491 3학점 인정"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / 연구 3 / AE Co-op 1 최대 9학점"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2022:AE:교과목일람표",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 AE210, AE220, AE300, AE208, AE307, AE330, AE400"
+        },
+        {
+          "id": "advanced-major",
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "심화전공 18학점 이상 / 표 기재 교과목 + 500단위 상호인정 교과목 인정"
+        },
+        {
+          "id": "minor-double-research",
+          "slotKey": "2022:AE:교과목이수요건",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / 연구 3 / AE Co-op 1 최대 9학점"
+        },
+        {
+          "id": "list-equivalencies",
+          "slotKey": "2022:AE:교과목일람표",
+          "year": 2022,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 3,
+          "excerpt": "AE210 항공우주 열역학 / AE230 항공우주 재료역학 / AE311 항공우주 열전달 / AE370 수치해석 old-code equivalency family remains listed in the same code family"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한 총 전공 이수학점 규칙이다."
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공선택으로 취급되는 AE 전공과목 기준 해석이다.",
+                "공과대학 CoE491 코드는 최대 3학점까지 전공선택으로 인정한다."
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ],
+              "requiredCredits": 18,
+              "eligibleCourseCodes": [
+                "AE321",
+                "AE331",
+                "AE401",
+                "AE405",
+                "AE409",
+                "AE410",
+                "AE420",
+                "AE435",
+                "AE450",
+                "AE455",
+                "AE480",
+                "AE492",
+                "AE493"
+              ],
+              "notes": [
+                "표 기재 과목 기준. 500단위 상호인정 과목은 수동 확인이 필요하다."
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "AE490",
+                "AE401"
+              ],
+              "notes": [
+                "졸업연구는 AE401 항공우주 시스템 설계 II로 대체 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            },
+            {
+              "id": "ae230-me231",
+              "label": "AE230 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME231"
+              ],
+              "canonicalCourseCode": "AE230",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae311-me311",
+              "label": "AE311 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME311"
+              ],
+              "canonicalCourseCode": "AE311",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae370-me301",
+              "label": "AE370 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME301"
+              ],
+              "canonicalCourseCode": "AE370",
+              "appliesTo": "major-elective"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-500-level",
+              "label": "심화전공 500단위 상호인정",
+              "status": "manual-review-only",
+              "reason": "심화전공 표 외에 500단위 이상 상호인정 전공과목을 심화전공으로 인정한다고만 적혀 있어, 실제 인정 과목 목록과 승인 상태를 문서만으로 완결적으로 산정할 수 없다.",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ]
+            },
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 1/2는 졸업연구·전공선택·자유선택으로 분배되지만 실제 인정은 인턴십 이수 여부와 시점 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "2020-2021 admissions use the 2016학년도 이후 AE section with 42 major credits and 21 required-major credits.",
+            "The official list doc identifies the seven AE 전공필수 slots explicitly."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "major-core-seven",
+              "scenario": "AE210, AE220, AE300, AE208, AE307, AE330, AE400을 모두 이수한 경우",
+              "expectedInterpretation": "전공필수 21학점 슬롯은 충족으로 본다.",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae210-substitution",
+              "scenario": "AE210 대신 ME211을 이수한 경우",
+              "expectedInterpretation": "열역학 슬롯은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한다. 타 학사조직 전공과목은 최대 6학점 중복 인정 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 치환 규칙은 별도 이수 이력 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major-required",
+              "scenario": "AE 전공필수 21학점과 총 42학점을 이수한 경우",
+              "expectedInterpretation": "AE 복수전공 핵심 요건은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 18,
+              "eligiblePrefixes": [
+                "AE"
+              ]
+            },
+            {
+              "id": "minor-required-pool",
+              "label": "전공필수군 9학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ],
+              "requiredCredits": 9,
+              "eligibleCourseCodes": [
+                "AE210",
+                "AE220",
+                "AE300",
+                "AE208",
+                "AE307",
+                "AE330",
+                "AE400"
+              ],
+              "notes": [
+                "문구는 전공필수 9학점을 포함하도록 요구하므로, 전공필수 과목군에서 최소 9학점 이수로 해석한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-credit-pool"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-foundation-2022",
+              "label": "2022 basic-selection boundary",
+              "status": "manual-review-only",
+              "reason": "학과 지정 기초선택 요건은 2022년 이후 입학생부터 적용된다고 적혀 있어, 부전공 판단과 함께 공통요건 쪽에서도 함께 검토되어야 한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "AE 부전공은 고정된 개별 슬롯 목록이 아니라 전공필수군 9학점 포함 규칙으로 읽는 편이 문서와 가장 잘 맞는다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "minor-required-pool",
+              "scenario": "AE 전공필수군에서 3과목(9학점)과 AE 전공과목 총 18학점을 이수한 경우",
+              "expectedInterpretation": "AE 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae-2023-2024",
+      "label": "2023-2024 AE admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "2023학년도 이후 입학생 / 총 138학점 / 전공 42학점 / CoE491 3학점 인정"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / AE Co-op 1 최대 21학점"
+        },
+        {
+          "id": "research-clarification",
+          "slotKey": "2024:AE:교과목이수요건",
+          "year": 2024,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "졸업연구(대체과목 포함)는 최대 3학점까지 졸업 이수 학점으로 인정함"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2024:AE:교과목일람표",
+          "year": 2024,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 AE210, AE220, AE300, AE208, AE307, AE330, AE400"
+        },
+        {
+          "id": "advanced-major",
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "심화전공 18학점 이상 / 표 기재 교과목 + 500단위 상호인정 교과목 인정"
+        },
+        {
+          "id": "minor-double-research",
+          "slotKey": "2023:AE:교과목이수요건",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / 연구 3 / AE Co-op 1 최대 21학점"
+        },
+        {
+          "id": "list-equivalencies",
+          "slotKey": "2023:AE:교과목일람표",
+          "year": 2023,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 3,
+          "excerpt": "AE210 항공우주 열역학 / AE230 항공우주 재료역학 / AE311 항공우주 열전달 / AE370 수치해석 old-code equivalency family remains listed in the same code family"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "2023학년도 이후 AE 주전공 총 전공 이수학점 규칙이다."
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공선택으로 취급되는 AE 전공과목 기준 해석이다.",
+                "공과대학 CoE491 코드는 최대 3학점까지 전공선택으로 인정한다."
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ],
+              "requiredCredits": 18,
+              "eligibleCourseCodes": [
+                "AE321",
+                "AE331",
+                "AE401",
+                "AE405",
+                "AE409",
+                "AE410",
+                "AE420",
+                "AE435",
+                "AE450",
+                "AE455",
+                "AE480",
+                "AE492",
+                "AE493"
+              ],
+              "notes": [
+                "표 기재 과목 기준. 500단위 상호인정 과목은 수동 확인이 필요하다."
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "AE490",
+                "AE401"
+              ],
+              "notes": [
+                "졸업연구는 AE401 항공우주 시스템 설계 II로 대체 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            },
+            {
+              "id": "ae230-me231",
+              "label": "AE230 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME231"
+              ],
+              "canonicalCourseCode": "AE230",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae311-me311",
+              "label": "AE311 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME311"
+              ],
+              "canonicalCourseCode": "AE311",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae370-me301",
+              "label": "AE370 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME301"
+              ],
+              "canonicalCourseCode": "AE370",
+              "appliesTo": "major-elective"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-500-level",
+              "label": "심화전공 500단위 상호인정",
+              "status": "manual-review-only",
+              "reason": "심화전공 표 외에 500단위 이상 상호인정 전공과목을 심화전공으로 인정한다고만 적혀 있어, 실제 인정 과목 목록과 승인 상태를 문서만으로 완결적으로 산정할 수 없다.",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ]
+            },
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 1/2는 졸업연구·전공선택·자유선택으로 분배되지만 실제 인정은 인턴십 이수 여부와 시점 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-coop-2023",
+              "label": "AE Co-op 2023 분기",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 AE Co-op은 최대 21학점 치환 규칙을 따르지만, 2022년 겨울 이전 활동자는 9학점 규칙을 유지하므로 활동 시작 시점 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "2020-2021 admissions use the 2016학년도 이후 AE section with 42 major credits and 21 required-major credits.",
+            "The official list doc identifies the seven AE 전공필수 slots explicitly.",
+            "2023 admissions move to the 138-credit AE section while keeping the same seven required AE slots."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "major-core-seven",
+              "scenario": "AE210, AE220, AE300, AE208, AE307, AE330, AE400을 모두 이수한 경우",
+              "expectedInterpretation": "전공필수 21학점 슬롯은 충족으로 본다.",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae210-substitution",
+              "scenario": "AE210 대신 ME211을 이수한 경우",
+              "expectedInterpretation": "열역학 슬롯은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE210"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE220"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE300"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE208"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE307"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE330"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한다. 타 학사조직 전공과목은 최대 6학점 중복 인정 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-course-slot"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 치환 규칙은 별도 이수 이력 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-coop-2023",
+              "label": "AE Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2022년 겨울 이전 AE Co-op 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major-required",
+              "scenario": "AE 전공필수 21학점과 총 42학점을 이수한 경우",
+              "expectedInterpretation": "AE 복수전공 핵심 요건은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 18,
+              "eligiblePrefixes": [
+                "AE"
+              ]
+            },
+            {
+              "id": "minor-required-pool",
+              "label": "전공필수군 9학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ],
+              "requiredCredits": 9,
+              "eligibleCourseCodes": [
+                "AE210",
+                "AE220",
+                "AE300",
+                "AE208",
+                "AE307",
+                "AE330",
+                "AE400"
+              ],
+              "notes": [
+                "문구는 전공필수 9학점을 포함하도록 요구하므로, 전공필수 과목군에서 최소 9학점 이수로 해석한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME211"
+              ],
+              "canonicalCourseCode": "AE210",
+              "appliesTo": "required-credit-pool"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-foundation-2022",
+              "label": "2022 basic-selection boundary",
+              "status": "manual-review-only",
+              "reason": "학과 지정 기초선택 요건은 2022년 이후 입학생부터 적용된다고 적혀 있어, 부전공 판단과 함께 공통요건 쪽에서도 함께 검토되어야 한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "AE 부전공은 고정된 개별 슬롯 목록이 아니라 전공필수군 9학점 포함 규칙으로 읽는 편이 문서와 가장 잘 맞는다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "minor-required-pool",
+              "scenario": "AE 전공필수군에서 3과목(9학점)과 AE 전공과목 총 18학점을 이수한 경우",
+              "expectedInterpretation": "AE 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ae-2025",
+      "label": "2025 AE admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "2023학년도 이후 입학 / 총 138학점 / 전공필수 21 / 전공선택 21 / CoE49901 3학점 인정"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / AE Co-op 1 최대 21학점 / 2024학년도 가을학기 입학생부터 연구+자유선택 8학점 한도"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2025:AE:교과목일람표",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 AE21000, AE22000, AE30000, AE20008, AE30007, AE33000, AE40000"
+        },
+        {
+          "id": "list-equivalencies",
+          "slotKey": "2025:AE:교과목일람표",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목일람표",
+          "page": 3,
+          "excerpt": "AE21000<-ME20011, AE23000<-ME20031, AE31001<-ME30011, AE37000<-ME30001"
+        },
+        {
+          "id": "advanced-major",
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 5,
+          "excerpt": "심화전공 18학점 이상 / listed advanced AE50000 mutual-recognition note"
+        },
+        {
+          "id": "minor-double-research",
+          "slotKey": "2025:AE:교과목이수요건",
+          "year": 2025,
+          "department": "AE",
+          "documentType": "교과목이수요건",
+          "page": 4,
+          "excerpt": "부전공 18 / 복수전공 42 / 연구 3 / AE Co-op 1 최대 21학점"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE21000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE22000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE30000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE20008"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE30007"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE33000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE40000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "2023학년도 이후 AE 주전공 총 전공 이수학점 규칙이다."
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공선택으로 취급되는 AE 전공과목 기준 해석이다.",
+                "공과대학 CoE491 코드는 최대 3학점까지 전공선택으로 인정한다."
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ],
+              "requiredCredits": 18,
+              "eligibleCourseCodes": [
+                "AE32001",
+                "AE33001",
+                "AE40001",
+                "AE40005",
+                "AE40009",
+                "AE41000",
+                "AE42000",
+                "AE43005",
+                "AE45000",
+                "AE45005",
+                "AE48000",
+                "AE49902",
+                "AE49903"
+              ],
+              "notes": [
+                "표 기재 과목 기준. 500단위 상호인정 과목은 수동 확인이 필요하다."
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "AE91000",
+                "AE40001"
+              ],
+              "notes": [
+                "졸업연구는 AE401 항공우주 시스템 설계 II로 대체 가능하다.",
+                "2025 문서는 2024학년도 가을학기 입학생부터 졸업이수학점 인정 한도를 8학점(연구 4 + 자유선택 4)으로 적어 추가 수동 검토가 필요하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME20011"
+              ],
+              "canonicalCourseCode": "AE21000",
+              "appliesTo": "required-course-slot"
+            },
+            {
+              "id": "ae230-me231",
+              "label": "AE230 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME20031"
+              ],
+              "canonicalCourseCode": "AE230",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae311-me311",
+              "label": "AE311 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME30011"
+              ],
+              "canonicalCourseCode": "AE311",
+              "appliesTo": "major-elective"
+            },
+            {
+              "id": "ae370-me301",
+              "label": "AE370 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME30001"
+              ],
+              "canonicalCourseCode": "AE370",
+              "appliesTo": "major-elective"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-500-level",
+              "label": "심화전공 500단위 상호인정",
+              "status": "manual-review-only",
+              "reason": "심화전공 표 외에 500단위 이상 상호인정 전공과목을 심화전공으로 인정한다고만 적혀 있어, 실제 인정 과목 목록과 승인 상태를 문서만으로 완결적으로 산정할 수 없다.",
+              "sourceEvidenceIds": [
+                "advanced-major"
+              ]
+            },
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 1/2는 졸업연구·전공선택·자유선택으로 분배되지만 실제 인정은 인턴십 이수 여부와 시점 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-coop-2023",
+              "label": "AE Co-op 2023 분기",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 AE Co-op은 최대 21학점 치환 규칙을 따르지만, 2022년 겨울 이전 활동자는 9학점 규칙을 유지하므로 활동 시작 시점 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-research-2025",
+              "label": "2024-fall entrant research cap",
+              "status": "manual-review-only",
+              "reason": "2025 AE 문서는 2024학년도 가을학기 입학생부터 연구/자유선택 합산 인정 방식이 추가되지만 현재 앱 모델은 연-단위 admissionYear만 다뤄 자동 판정에 충분하지 않다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "2020-2021 admissions use the 2016학년도 이후 AE section with 42 major credits and 21 required-major credits.",
+            "The official list doc identifies the seven AE 전공필수 slots explicitly.",
+            "2023 admissions move to the 138-credit AE section while keeping the same seven required AE slots."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "major-core-seven",
+              "scenario": "AE210, AE220, AE300, AE208, AE307, AE330, AE400을 모두 이수한 경우",
+              "expectedInterpretation": "전공필수 21학점 슬롯은 충족으로 본다.",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae210-substitution",
+              "scenario": "AE210 대신 ME211을 이수한 경우",
+              "expectedInterpretation": "열역학 슬롯은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "ae210",
+              "label": "항공우주 열역학",
+              "acceptedCourseCodes": [
+                "AE21000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae220",
+              "label": "공기역학 I",
+              "acceptedCourseCodes": [
+                "AE22000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae300",
+              "label": "비행역학 프로젝트",
+              "acceptedCourseCodes": [
+                "AE30000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae208",
+              "label": "항공우주공학 실험 I",
+              "acceptedCourseCodes": [
+                "AE20008"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae307",
+              "label": "항공우주공학 실험 II",
+              "acceptedCourseCodes": [
+                "AE30007"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae330",
+              "label": "항공우주 구조역학 I",
+              "acceptedCourseCodes": [
+                "AE33000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "ae400",
+              "label": "항공우주 시스템 설계 I",
+              "acceptedCourseCodes": [
+                "AE40000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 42학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 42,
+              "eligiblePrefixes": [
+                "AE"
+              ],
+              "notes": [
+                "전공필수 21학점을 포함한다. 타 학사조직 전공과목은 최대 6학점 중복 인정 가능하다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME20011"
+              ],
+              "canonicalCourseCode": "AE21000",
+              "appliesTo": "required-course-slot"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-coop-2022",
+              "label": "AE Co-op 2022 분기",
+              "status": "manual-review-only",
+              "reason": "AE Co-op 치환 규칙은 별도 이수 이력 검토가 필요하다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-coop-2023",
+              "label": "AE Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2022년 겨울 이전 AE Co-op 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-research-2025",
+              "label": "2024-fall entrant research cap",
+              "status": "manual-review-only",
+              "reason": "2025 AE 문서는 2024학년도 가을학기 입학생부터 연구/자유선택 합산 인정 방식이 추가되지만 현재 앱 모델은 연-단위 admissionYear만 다뤄 자동 판정에 충분하지 않다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major-required",
+              "scenario": "AE 전공필수 21학점과 총 42학점을 이수한 경우",
+              "expectedInterpretation": "AE 복수전공 핵심 요건은 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 18학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research"
+              ],
+              "requiredCredits": 18,
+              "eligiblePrefixes": [
+                "AE"
+              ]
+            },
+            {
+              "id": "minor-required-pool",
+              "label": "전공필수군 9학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ],
+              "requiredCredits": 9,
+              "eligibleCourseCodes": [
+                "AE21000",
+                "AE22000",
+                "AE30000",
+                "AE20008",
+                "AE30007",
+                "AE33000",
+                "AE40000"
+              ],
+              "notes": [
+                "문구는 전공필수 9학점을 포함하도록 요구하므로, 전공필수 과목군에서 최소 9학점 이수로 해석한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [
+            {
+              "id": "ae210-me211",
+              "label": "AE210 대체",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-equivalencies"
+              ],
+              "acceptedCourseCodes": [
+                "ME20011"
+              ],
+              "canonicalCourseCode": "AE21000",
+              "appliesTo": "required-credit-pool"
+            }
+          ],
+          "manualReviewOnlyCases": [
+            {
+              "id": "ae-foundation-2022",
+              "label": "2022 basic-selection boundary",
+              "status": "manual-review-only",
+              "reason": "학과 지정 기초선택 요건은 2022년 이후 입학생부터 적용된다고 적혀 있어, 부전공 판단과 함께 공통요건 쪽에서도 함께 검토되어야 한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "programs-research"
+              ]
+            },
+            {
+              "id": "ae-research-2025",
+              "label": "2024-fall entrant research cap",
+              "status": "manual-review-only",
+              "reason": "2025 AE 문서는 2024학년도 가을학기 입학생부터 연구/자유선택 합산 인정 방식이 추가되지만 현재 앱 모델은 연-단위 admissionYear만 다뤄 자동 판정에 충분하지 않다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "AE 부전공은 고정된 개별 슬롯 목록이 아니라 전공필수군 9학점 포함 규칙으로 읽는 편이 문서와 가장 잘 맞는다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "minor-required-pool",
+              "scenario": "AE 전공필수군에서 3과목(9학점)과 AE 전공과목 총 18학점을 이수한 경우",
+              "expectedInterpretation": "AE 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "minor-double-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "slices": [
+    {
+      "admissionYearRange": [
+        2019,
+        2019
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "limited",
+      "runtimeSupportStatus": "common-only",
+      "ruleSetId": null,
+      "supportLimitations": [
+        "2019 AE requirement/list/overview bulletin slots are confirmed missing in the verified workflow.",
+        "No official-source-backed AE rule interpretation is encoded for 2019 admissions.",
+        "Runtime remains common-only because no official-source-backed AE rule interpretation is encoded for 2019 admissions."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2020,
+        2021
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "ae-2020-2021",
+      "supportLimitations": [
+        "심화전공 500단위 상호인정 과목은 수동 검토가 필요하다."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2022,
+        2022
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "ae-2022",
+      "supportLimitations": [
+        "AE Co-op substitution depends on internship timing and remains a manual-review edge case."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "ae-2023-2024",
+      "supportLimitations": [
+        "2024 research-credit clarifications and semester-specific internship timing still need manual-review handling in a future analyzer wave."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "ae-2025",
+      "supportLimitations": [
+        "The 2025 doc introduces a semester-specific 2024-fall entrant research-credit edge case that is manual-review-only in the current annual admission-year model."
+      ]
+    }
+  ]
+}

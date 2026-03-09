@@ -1,0 +1,1746 @@
+{
+  "version": 1,
+  "department": "ME",
+  "displayName": "기계공학과",
+  "reviewedAt": "2026-03-09",
+  "scope": {
+    "admissionYearRange": [
+      2019,
+      2025
+    ],
+    "programTypes": [
+      "심화전공",
+      "복수전공",
+      "부전공"
+    ]
+  },
+  "yearBoundaryAnalysis": [
+    {
+      "admissionYearRange": [
+        2019,
+        2020
+      ],
+      "status": "reviewed",
+      "reason": "2019-2020 ME admissions both fall under the 2016학년도 이후 section with the base post-2016 rule set before the CoE/tailored external-credit split appears. The 2019 bulletin tree does not expose ME as a department node, but the official requirement document from any captured year (e.g. 2020, 2025) covers 2019 admissions under the same 2016학년도 이후 rule section.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2020:ME:교과목이수요건",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2016학년도 이후 입학 학사과정용 / 전공 총 48학점 / 전공필수 12 / 전공선택 36 / 기반과목 9개 중 5과목 이상"
+        },
+        {
+          "slotKey": "2020:ME:교과목이수요건",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "심화전공 15학점 + 기반과목 9과목 모두 이수"
+        },
+        {
+          "slotKey": "2020:ME:교과목일람표",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 ME200, ME303, ME340, ME400 / 기반과목 9개 코드"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2021,
+        2022
+      ],
+      "status": "reviewed",
+      "reason": "2021 introduces the explicit external-credit policy split: 2021+ admissions can count up to 3 CoE elective credits but no other external-major credits; 2022 keeps that structure and only changes Co-op wording for already-completed courses in other cohorts.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2021:ME:교과목이수요건",
+          "year": 2021,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2021학년도 이후 입학생은 CoE 3학점까지 인정하고 타 학과 전공과목은 불인정"
+        },
+        {
+          "slotKey": "2022:ME:교과목이수요건",
+          "year": 2022,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2020학년도까지 입학한 학생 ... / 2021학년도 이후 입학생은 ..."
+        },
+        {
+          "slotKey": "2022:ME:교과목일람표",
+          "year": 2022,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수/기반과목 구성이 유지됨"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "status": "reviewed",
+      "reason": "2023 keeps the 2021+ core structure but upgrades ME Co-op from the 9-credit pattern to the 21-credit pattern with a pre-2023 grandfather clause. 2024 preserves the same rule family and old code system.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2023:ME:교과목이수요건",
+          "year": 2023,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 2,
+          "excerpt": "ME Co-op 1 최대 21학점 / 2022년 겨울학기까지 수행한 경우는 9학점 규칙"
+        },
+        {
+          "slotKey": "2023:ME:교과목이수요건",
+          "year": 2023,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "전공 총 48 / 전공필수 12 / 전공선택 36 / 기반과목 9개 중 5과목 이상"
+        },
+        {
+          "slotKey": "2024:ME:교과목이수요건",
+          "year": 2024,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2023 구조 유지"
+        }
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "status": "reviewed",
+      "reason": "2025 preserves the 2023-2024 ME rule family but moves the department to the new dotted code system.",
+      "sourceEvidence": [
+        {
+          "slotKey": "2025:ME:교과목이수요건",
+          "year": 2025,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "ME.20000 / ME.20005 / ME.30040 / ME.40000 등 신 코드 체계"
+        },
+        {
+          "slotKey": "2025:ME:교과목일람표",
+          "year": 2025,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수와 기반과목 코드가 dotted 체계로 재표기됨"
+        }
+      ]
+    }
+  ],
+  "ruleSets": [
+    {
+      "id": "me-2020",
+      "label": "2020 ME admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2020:ME:교과목이수요건",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "전공 총 48학점 / 전공필수 12 / 전공선택 36 / 기반과목 9개 중 5과목 이상"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2020:ME:교과목이수요건",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "심화전공 15학점 + 기반과목 9과목 / 부전공 21학점 / 복수전공 40학점 / 연구 3학점 / ME Co-op 9학점"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2020:ME:교과목일람표",
+          "year": 2020,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 ME200, ME303, ME340, ME400 / 기반과목 ME207, ME211, ME221, ME231, ME251, ME311, ME351, ME361, ME370"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 48학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 48,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 36학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 36,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "2020 admissions do not yet carry the later CoE-only external-credit restriction."
+              ]
+            },
+            {
+              "id": "basis-minimum",
+              "label": "기반과목 9개 중 5과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ],
+              "requiredCourseCount": 5,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 15학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 15,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "일반전공 이수과목을 제외한 전공과목 기준이다."
+              ]
+            },
+            {
+              "id": "basis-all",
+              "label": "기반과목 9과목 모두 이수",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 9,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "ME490",
+                "ME401"
+              ],
+              "notes": [
+                "창의적 시스템구현 II로 대체 가능하다. 세미나는 자유선택이다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-subtraction",
+              "label": "심화전공 일반전공 제외 계산",
+              "status": "manual-review-only",
+              "reason": "심화전공 15학점은 일반전공 이수과목을 제외하고 계산해야 하므로 실제 적용 시 이미 충족한 일반전공 범위를 함께 검토해야 한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "ME 2020 admissions use four fixed practical/design required slots plus a nine-course basis pool requirement."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "basis-five",
+              "scenario": "기반과목 9개 중 5과목과 전공필수 4과목을 포함해 총 48학점을 이수한 경우",
+              "expectedInterpretation": "ME 주전공 최소 구조는 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 40학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 40,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "전공필수 12학점을 포함한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major",
+              "scenario": "ME 전공필수 12학점과 총 40학점을 이수한 경우",
+              "expectedInterpretation": "ME 복수전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "minor-required-slots",
+              "label": "전공필수 2과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 2,
+              "eligibleCourseCodes": [
+                "ME200",
+                "ME303",
+                "ME340",
+                "ME400"
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [],
+          "interpretationNotes": [],
+          "acceptanceExamples": [
+            {
+              "id": "minor-two-required",
+              "scenario": "ME 전공필수 2과목과 총 21학점을 이수한 경우",
+              "expectedInterpretation": "ME 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "me-2021-2022",
+      "label": "2021-2022 ME admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2021:ME:교과목이수요건",
+          "year": 2021,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "2021학년도 이후 입학생은 CoE 3학점까지 인정하고 타 학과 전공과목은 불인정"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2022:ME:교과목이수요건",
+          "year": 2022,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "전공 총 48 / 심화 15 / 부전공 21 / 복수전공 40 / 연구 3 / Co-op 9학점"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2022:ME:교과목일람표",
+          "year": 2022,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 ME200, ME303, ME340, ME400 / 기반과목 ME207, ME211, ME221, ME231, ME251, ME311, ME351, ME361, ME370"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 48학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 48,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 36학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 36,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "2020 admissions do not yet carry the later CoE-only external-credit restriction.",
+                "2021-2022 admissions can count at most 3 CoE elective credits; other external-major credits are not counted for 2021학년도 이후 입학생 slices."
+              ]
+            },
+            {
+              "id": "basis-minimum",
+              "label": "기반과목 9개 중 5과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ],
+              "requiredCourseCount": 5,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 15학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 15,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "일반전공 이수과목을 제외한 전공과목 기준이다."
+              ]
+            },
+            {
+              "id": "basis-all",
+              "label": "기반과목 9과목 모두 이수",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 9,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "ME490",
+                "ME401"
+              ],
+              "notes": [
+                "창의적 시스템구현 II로 대체 가능하다. 세미나는 자유선택이다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-subtraction",
+              "label": "심화전공 일반전공 제외 계산",
+              "status": "manual-review-only",
+              "reason": "심화전공 15학점은 일반전공 이수과목을 제외하고 계산해야 하므로 실제 적용 시 이미 충족한 일반전공 범위를 함께 검토해야 한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "ME 2020 admissions use four fixed practical/design required slots plus a nine-course basis pool requirement."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "basis-five",
+              "scenario": "기반과목 9개 중 5과목과 전공필수 4과목을 포함해 총 48학점을 이수한 경우",
+              "expectedInterpretation": "ME 주전공 최소 구조는 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 40학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 40,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "전공필수 12학점을 포함한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major",
+              "scenario": "ME 전공필수 12학점과 총 40학점을 이수한 경우",
+              "expectedInterpretation": "ME 복수전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "minor-required-slots",
+              "label": "전공필수 2과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 2,
+              "eligibleCourseCodes": [
+                "ME200",
+                "ME303",
+                "ME340",
+                "ME400"
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            }
+          ],
+          "interpretationNotes": [],
+          "acceptanceExamples": [
+            {
+              "id": "minor-two-required",
+              "scenario": "ME 전공필수 2과목과 총 21학점을 이수한 경우",
+              "expectedInterpretation": "ME 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "me-2023-2024",
+      "label": "2023-2024 ME admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2023:ME:교과목이수요건",
+          "year": 2023,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "전공 총 48 / CoE 3학점까지만 인정 / 타 학과 전공과목 불인정"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2023:ME:교과목이수요건",
+          "year": 2023,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 2,
+          "excerpt": "ME Co-op 1 최대 21학점 / 2022년 겨울 이전 활동자는 9학점 규칙"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2023:ME:교과목일람표",
+          "year": 2023,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 ME200, ME303, ME340, ME400 / 기반과목 ME207, ME211, ME221, ME231, ME251, ME311, ME351, ME361, ME370"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 48학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 48,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 36학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 36,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "2020 admissions do not yet carry the later CoE-only external-credit restriction.",
+                "2021-2022 admissions can count at most 3 CoE elective credits; other external-major credits are not counted for 2021학년도 이후 입학생 slices."
+              ]
+            },
+            {
+              "id": "basis-minimum",
+              "label": "기반과목 9개 중 5과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ],
+              "requiredCourseCount": 5,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 15학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 15,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "일반전공 이수과목을 제외한 전공과목 기준이다."
+              ]
+            },
+            {
+              "id": "basis-all",
+              "label": "기반과목 9과목 모두 이수",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 9,
+              "eligibleCourseCodes": [
+                "ME207",
+                "ME211",
+                "ME221",
+                "ME231",
+                "ME251",
+                "ME311",
+                "ME351",
+                "ME361",
+                "ME370"
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "ME490",
+                "ME401"
+              ],
+              "notes": [
+                "창의적 시스템구현 II로 대체 가능하다. 세미나는 자유선택이다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-subtraction",
+              "label": "심화전공 일반전공 제외 계산",
+              "status": "manual-review-only",
+              "reason": "심화전공 15학점은 일반전공 이수과목을 제외하고 계산해야 하므로 실제 적용 시 이미 충족한 일반전공 범위를 함께 검토해야 한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "ME 2020 admissions use four fixed practical/design required slots plus a nine-course basis pool requirement."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "basis-five",
+              "scenario": "기반과목 9개 중 5과목과 전공필수 4과목을 포함해 총 48학점을 이수한 경우",
+              "expectedInterpretation": "ME 주전공 최소 구조는 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME200"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME303"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME340"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME400"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 40학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 40,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "전공필수 12학점을 포함한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major",
+              "scenario": "ME 전공필수 12학점과 총 40학점을 이수한 경우",
+              "expectedInterpretation": "ME 복수전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "minor-required-slots",
+              "label": "전공필수 2과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 2,
+              "eligibleCourseCodes": [
+                "ME200",
+                "ME303",
+                "ME340",
+                "ME400"
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [],
+          "acceptanceExamples": [
+            {
+              "id": "minor-two-required",
+              "scenario": "ME 전공필수 2과목과 총 21학점을 이수한 경우",
+              "expectedInterpretation": "ME 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "me-2025",
+      "label": "2025 ME admissions",
+      "sourceEvidence": [
+        {
+          "id": "core-major",
+          "slotKey": "2025:ME:교과목이수요건",
+          "year": 2025,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "ME.20000 / ME.20005 / ME.30040 / ME.40000 and dotted basis-course codes"
+        },
+        {
+          "id": "programs-research",
+          "slotKey": "2025:ME:교과목이수요건",
+          "year": 2025,
+          "department": "ME",
+          "documentType": "교과목이수요건",
+          "page": 3,
+          "excerpt": "ME Co-op 1 최대 21학점 / 2022년 겨울 이전 활동자는 9학점 규칙"
+        },
+        {
+          "id": "list-core",
+          "slotKey": "2025:ME:교과목일람표",
+          "year": 2025,
+          "department": "ME",
+          "documentType": "교과목일람표",
+          "page": 1,
+          "excerpt": "전공필수 ME.20000, ME.20005, ME.30040, ME.40000 / basis-course dotted codes"
+        }
+      ],
+      "programs": [
+        {
+          "programType": "심화전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME.20000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME.20005"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME.30040"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME.40000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "major-total",
+              "label": "전공 48학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 48,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "major-elective",
+              "label": "전공선택 36학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major"
+              ],
+              "requiredCredits": 36,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "2020 admissions do not yet carry the later CoE-only external-credit restriction.",
+                "2021-2022 admissions can count at most 3 CoE elective credits; other external-major credits are not counted for 2021학년도 이후 입학생 slices."
+              ]
+            },
+            {
+              "id": "basis-minimum",
+              "label": "기반과목 9개 중 5과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ],
+              "requiredCourseCount": 5,
+              "eligibleCourseCodes": [
+                "ME.20007",
+                "ME.20011",
+                "ME.20021",
+                "ME.20031",
+                "ME.20051",
+                "ME.30011",
+                "ME.30051",
+                "ME.30061",
+                "ME.30070"
+              ]
+            },
+            {
+              "id": "advanced-major",
+              "label": "심화전공 15학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 15,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "일반전공 이수과목을 제외한 전공과목 기준이다."
+              ]
+            },
+            {
+              "id": "basis-all",
+              "label": "기반과목 9과목 모두 이수",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 9,
+              "eligibleCourseCodes": [
+                "ME.20007",
+                "ME.20011",
+                "ME.20021",
+                "ME.20031",
+                "ME.20051",
+                "ME.30011",
+                "ME.30051",
+                "ME.30061",
+                "ME.30070"
+              ]
+            },
+            {
+              "id": "research",
+              "label": "연구 3학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 3,
+              "eligibleCourseCodes": [
+                "ME.91000",
+                "ME.40001"
+              ],
+              "notes": [
+                "창의적 시스템구현 II로 대체 가능하다. 세미나는 자유선택이다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "advanced-major-subtraction",
+              "label": "심화전공 일반전공 제외 계산",
+              "status": "manual-review-only",
+              "reason": "심화전공 15학점은 일반전공 이수과목을 제외하고 계산해야 하므로 실제 적용 시 이미 충족한 일반전공 범위를 함께 검토해야 한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            },
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "ME 2020 admissions use four fixed practical/design required slots plus a nine-course basis pool requirement."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "basis-five",
+              "scenario": "기반과목 9개 중 5과목과 전공필수 4과목을 포함해 총 48학점을 이수한 경우",
+              "expectedInterpretation": "ME 주전공 최소 구조는 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "core-major",
+                "list-core"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "복수전공",
+          "requiredCourseSlots": [
+            {
+              "id": "me200",
+              "label": "기계기초실습",
+              "acceptedCourseCodes": [
+                "ME.20000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me303",
+              "label": "기계공학실험",
+              "acceptedCourseCodes": [
+                "ME.20005"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me340",
+              "label": "공학설계",
+              "acceptedCourseCodes": [
+                "ME.30040"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            },
+            {
+              "id": "me400",
+              "label": "창의적 시스템구현 I",
+              "acceptedCourseCodes": [
+                "ME.40000"
+              ],
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "list-core"
+              ]
+            }
+          ],
+          "eligibleCreditBuckets": [
+            {
+              "id": "double-major-total",
+              "label": "복수전공 40학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 40,
+              "eligiblePrefixes": [
+                "ME"
+              ],
+              "notes": [
+                "전공필수 12학점을 포함한다."
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [
+            "복수전공은 연구과목 이수를 면제한다."
+          ],
+          "acceptanceExamples": [
+            {
+              "id": "double-major",
+              "scenario": "ME 전공필수 12학점과 총 40학점을 이수한 경우",
+              "expectedInterpretation": "ME 복수전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ]
+        },
+        {
+          "programType": "부전공",
+          "requiredCourseSlots": [],
+          "eligibleCreditBuckets": [
+            {
+              "id": "minor-total",
+              "label": "부전공 21학점 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ],
+              "requiredCredits": 21,
+              "eligiblePrefixes": [
+                "ME"
+              ]
+            },
+            {
+              "id": "minor-required-slots",
+              "label": "전공필수 2과목 이상",
+              "status": "explicit",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ],
+              "requiredCourseCount": 2,
+              "eligibleCourseCodes": [
+                "ME.20000",
+                "ME.20005",
+                "ME.30040",
+                "ME.40000"
+              ]
+            }
+          ],
+          "explicitEquivalencies": [],
+          "manualReviewOnlyCases": [
+            {
+              "id": "external-credit-origin",
+              "label": "외부 전공학점 출처 계산",
+              "status": "manual-review-only",
+              "reason": "ME 2021-2022 문서는 전공선택 인정 범위를 입학년도에 따라 다르게 적고 있어 실제 판정에는 과목 출처와 학점원천 계산이 필요하다.",
+              "sourceEvidenceIds": [
+                "core-major"
+              ]
+            },
+            {
+              "id": "me-coop-2023",
+              "label": "ME Co-op grandfathering",
+              "status": "manual-review-only",
+              "reason": "2023년 봄부터 시작한 Co-op만 21학점 규칙을 따르고, 2022년 겨울 이전 활동자는 9학점 규칙을 유지한다.",
+              "sourceEvidenceIds": [
+                "programs-research"
+              ]
+            }
+          ],
+          "interpretationNotes": [],
+          "acceptanceExamples": [
+            {
+              "id": "minor-two-required",
+              "scenario": "ME 전공필수 2과목과 총 21학점을 이수한 경우",
+              "expectedInterpretation": "ME 부전공 최소 요건 충족으로 해석한다.",
+              "sourceEvidenceIds": [
+                "programs-research",
+                "list-core"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "slices": [
+    {
+      "admissionYearRange": [
+        2019,
+        2019
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "limited",
+      "runtimeSupportStatus": "common-only",
+      "ruleSetId": null,
+      "supportLimitations": [
+        "2019 ME requirement/list/overview slots are confirmed missing in the verified workflow.",
+        "No official-source-backed ME rule interpretation is encoded for 2019 admissions.",
+        "Runtime remains common-only because no official-source-backed ME rule interpretation is encoded for 2019 admissions."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2020,
+        2020
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "me-2020",
+      "supportLimitations": [
+        "심화전공 15학점은 일반전공 이수과목 제외 계산이라 future analyzer work is still needed."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2021,
+        2022
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "me-2021-2022",
+      "supportLimitations": [
+        "외부 전공학점 인정은 CoE 3학점 제한 등 세부 credit-origin 계산이 필요하다."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2023,
+        2024
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "me-2023-2024",
+      "supportLimitations": [
+        "ME Co-op 2023 grandfathering depends on internship start term and remains manual-review-only in an annual admission-year model."
+      ]
+    },
+    {
+      "admissionYearRange": [
+        2025,
+        2025
+      ],
+      "programTypes": [
+        "심화전공",
+        "복수전공",
+        "부전공"
+      ],
+      "reviewedInterpretationStatus": "reviewed",
+      "runtimeSupportStatus": "supported",
+      "ruleSetId": "me-2025",
+      "supportLimitations": [
+        "2025 uses the dotted code family and still needs analyzer-side course-code normalization work."
+      ]
+    }
+  ]
+}

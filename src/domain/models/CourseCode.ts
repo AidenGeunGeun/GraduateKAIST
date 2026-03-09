@@ -27,16 +27,17 @@ export class CourseCode {
   }
 
   get numericPart(): number {
-    const oldMatch = this.oldCode.match(/(\d+)/);
-    if (oldMatch) {
-      return Number(oldMatch[1]);
+    const code = this.oldCode || this.newCode;
+    const match = code.match(/(\d+)/);
+    if (!match) {
+      return 0;
     }
 
-    const newMatch = this.newCode.match(/\.(\d+)/);
-    if (newMatch) {
-      return Number(newMatch[1]);
+    const num = Number(match[1]);
+    if (num >= 10000) {
+      return Math.floor(num / 10000) * 100;
     }
 
-    return 0;
+    return num;
   }
 }

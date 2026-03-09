@@ -1,0 +1,1316 @@
+{
+  "version": 3,
+  "entries": [
+    {
+      "year": 2019,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check used the verified 2019 bulletin entry and found zero 항공우주공학과/항공우주공학전공 labels in the live 2019 major tree.",
+        "The same 2019 tree exposed only 전산학부 and 전기및전자공학부 among the four target departments.",
+        "Reclassified from needs-manual-recheck to missing because the verified UI did not expose a reachable 2019 AE requirement slot."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check again found zero 항공우주공학과/항공우주공학전공 labels in the live 2019 major tree.",
+        "Without a reachable 2019 AE department node, the list tab never became available in the verified UI.",
+        "Classified as confirmed missing from the current verified bulletin workflow rather than unresolved."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check again found zero 항공우주공학과/항공우주공학전공 labels in the live 2019 major tree.",
+        "Without a reachable 2019 AE department node, the overview tab never became available in the verified UI.",
+        "Classified as confirmed missing from the current verified bulletin workflow rather than unresolved."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202555",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043150287",
+      "streamdocsId": "72059367043150287",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 re-check refreshed the 2019 CS requirement viewer from the verified bulletin workflow.",
+        "The 2019 CS document tabs are reachable after selecting 전산학부, but tab switches append new viewer iframes instead of replacing the first one."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202555",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043154710",
+      "streamdocsId": "72059367043154710",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior missing classification by clicking the explicit 2019 교과목일람표 tab after 전산학부 selection.",
+        "The first iframe remained on the requirement viewer while the list tab appended a second viewer iframe with this distinct streamdocsId."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202555",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043163001",
+      "streamdocsId": "72059367043163001",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior missing classification by clicking the explicit 2019 교과목개요 tab after 전산학부 selection.",
+        "After the overview click, the requirement and list iframes remained mounted and the new overview viewer appeared as an additional iframe."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202566",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043152793",
+      "streamdocsId": "72059367043152793",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 re-check refreshed the 2019 EE requirement viewer from the verified bulletin workflow.",
+        "The 2019 EE document tabs are reachable after selecting 전기및전자공학부, but tab switches append new viewer iframes instead of replacing the first one."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202566",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043157730",
+      "streamdocsId": "72059367043157730",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior missing classification by clicking the explicit 2019 교과목일람표 tab after 전기및전자공학부 selection.",
+        "The first iframe remained on the requirement viewer while the list tab appended a second viewer iframe with this distinct streamdocsId."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005202566",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043166056",
+      "streamdocsId": "72059367043166056",
+      "noticeLine": "아래 내용은 2019 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior missing classification by clicking the explicit 2019 교과목개요 tab after 전기및전자공학부 selection.",
+        "After the overview click, the requirement and list iframes remained mounted and the new overview viewer appeared as an additional iframe."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check used the verified 2019 bulletin entry and found zero 기계공학과/기계공학전공 labels in the live 2019 major tree.",
+        "The same 2019 tree exposed only 전산학부 and 전기및전자공학부 among the four target departments.",
+        "Reclassified from needs-manual-recheck to missing because the verified UI did not expose a reachable 2019 ME requirement slot."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check again found zero 기계공학과/기계공학전공 labels in the live 2019 major tree.",
+        "Without a reachable 2019 ME department node, the list tab never became available in the verified UI.",
+        "Classified as confirmed missing from the current verified bulletin workflow rather than unresolved."
+      ]
+    },
+    {
+      "year": 2019,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005170361",
+      "viewerUrl": null,
+      "streamdocsId": null,
+      "noticeLine": null,
+      "selectedDepartments": [],
+      "collectionStatus": "missing",
+      "notes": [
+        "Wave 1.5 re-check again found zero 기계공학과/기계공학전공 labels in the live 2019 major tree.",
+        "Without a reachable 2019 ME department node, the overview tab never became available in the verified UI.",
+        "Classified as confirmed missing from the current verified bulletin workflow rather than unresolved."
+      ]
+    },
+    {
+      "year": 2020,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003090957",
+      "streamdocsId": "72059367003090957",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773004958755",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367042906504",
+      "streamdocsId": "72059367042906504",
+      "noticeLine": "아래 내용은 2020 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by re-running the 2020 AE list-tab click from the verified workflow.",
+        "The first iframe stayed on the requirement viewer 72059367042900343 while the list tab appended this distinct viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2020,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004322149",
+      "streamdocsId": "72059367004322149",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003090928",
+      "streamdocsId": "72059367003090928",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004327397",
+      "streamdocsId": "72059367004327397",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004328096",
+      "streamdocsId": "72059367004328096",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003092464",
+      "streamdocsId": "72059367003092464",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004330185",
+      "streamdocsId": "72059367004330185",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004330818",
+      "streamdocsId": "72059367004330818",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003089352",
+      "streamdocsId": "72059367003089352",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004324742",
+      "streamdocsId": "72059367004324742",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2020,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966376239",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004325209",
+      "streamdocsId": "72059367004325209",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002822178",
+      "streamdocsId": "72059367002822178",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002826912",
+      "streamdocsId": "72059367002826912",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002831444",
+      "streamdocsId": "72059367002831444",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366987458585",
+      "streamdocsId": "72059366987458585",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004526472",
+      "streamdocsId": "72059367004526472",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005016171",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367042964105",
+      "streamdocsId": "72059367042964105",
+      "noticeLine": "아래 내용은 2021 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by clicking the 2021 CS overview tab after department selection.",
+        "The default viewer iframe 72059367042961549 stayed mounted and the overview tab appended this distinct second viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2021,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003100123",
+      "streamdocsId": "72059367003100123",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004529468",
+      "streamdocsId": "72059367004529468",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004528500",
+      "streamdocsId": "72059367004528500",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366985007950",
+      "streamdocsId": "72059366985007950",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966574670",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004523753",
+      "streamdocsId": "72059367004523753",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2021,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005016181",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367042966646",
+      "streamdocsId": "72059367042966646",
+      "noticeLine": "아래 내용은 2021 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by clicking the 2021 ME overview tab after department selection.",
+        "The default viewer iframe 72059367042963350 stayed mounted and the overview tab appended this distinct second viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2022,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003103782",
+      "streamdocsId": "72059367003103782",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004553908",
+      "streamdocsId": "72059367004553908",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004554535",
+      "streamdocsId": "72059367004554535",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003106531",
+      "streamdocsId": "72059367003106531",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004559835",
+      "streamdocsId": "72059367004559835",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004560422",
+      "streamdocsId": "72059367004560422",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003107940",
+      "streamdocsId": "72059367003107940",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004562489",
+      "streamdocsId": "72059367004562489",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004563234",
+      "streamdocsId": "72059367004563234",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003105030",
+      "streamdocsId": "72059367003105030",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004557003",
+      "streamdocsId": "72059367004557003",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2022,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966602668",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004557604",
+      "streamdocsId": "72059367004557604",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003111563",
+      "streamdocsId": "72059367003111563",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005072276",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043022292",
+      "streamdocsId": "72059367043022292",
+      "noticeLine": "아래 내용은 2023 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by re-running the 2023 AE list-tab click from the verified workflow.",
+        "The first iframe stayed on the default viewer 72059367043015813 while the list tab appended this distinct viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2023,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004575554",
+      "streamdocsId": "72059367004575554",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003114074",
+      "streamdocsId": "72059367003114074",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005072325",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043022154",
+      "streamdocsId": "72059367043022154",
+      "noticeLine": "아래 내용은 2023 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by re-running the 2023 CS list-tab click from the verified workflow.",
+        "The first iframe stayed on the default viewer 72059367043014682 while the list tab appended this distinct viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2023,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004581367",
+      "streamdocsId": "72059367004581367",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003115551",
+      "streamdocsId": "72059367003115551",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004583495",
+      "streamdocsId": "72059367004583495",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004584228",
+      "streamdocsId": "72059367004584228",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003112682",
+      "streamdocsId": "72059367003112682",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2023,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005072335",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043024988",
+      "streamdocsId": "72059367043024988",
+      "noticeLine": "아래 내용은 2023 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by re-running the 2023 ME list-tab click from the verified workflow.",
+        "The first iframe stayed on the default viewer 72059367043015509 while the list tab appended this distinct viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2023,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966636051",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004578591",
+      "streamdocsId": "72059367004578591",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002479283",
+      "streamdocsId": "72059367002479283",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1773005109790",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367043058781",
+      "streamdocsId": "72059367043058781",
+      "noticeLine": "아래 내용은 2024 년도 학사요람 책자정보를 기준으로 작성되었습니다.",
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": [
+        "Wave 1.5 resolved the prior duplicate suspicion by re-running the 2024 AE list-tab click from the verified workflow.",
+        "The first iframe stayed on the requirement viewer 72059367043051349 while the list tab appended this distinct viewer iframe, so the slot is now captured."
+      ]
+    },
+    {
+      "year": 2024,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002815015",
+      "streamdocsId": "72059367002815015",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003121659",
+      "streamdocsId": "72059367003121659",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004602089",
+      "streamdocsId": "72059367004602089",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004602793",
+      "streamdocsId": "72059367004602793",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367001899418",
+      "streamdocsId": "72059367001899418",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004604768",
+      "streamdocsId": "72059367004604768",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004605474",
+      "streamdocsId": "72059367004605474",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367003120219",
+      "streamdocsId": "72059367003120219",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004599271",
+      "streamdocsId": "72059367004599271",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2024,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966656918",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004599753",
+      "streamdocsId": "72059367004599753",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366985929979",
+      "streamdocsId": "72059366985929979",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366986052925",
+      "streamdocsId": "72059366986052925",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "AE",
+      "departmentLabel": "항공우주공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367002640958",
+      "streamdocsId": "72059367002640958",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "항공우주공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366933738949",
+      "streamdocsId": "72059366933738949",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366933888718",
+      "streamdocsId": "72059366933888718",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "CS",
+      "departmentLabel": "전산학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366982993257",
+      "streamdocsId": "72059366982993257",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전산학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366980686473",
+      "streamdocsId": "72059366980686473",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366981582957",
+      "streamdocsId": "72059366981582957",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "EE",
+      "departmentLabel": "전기및전자공학부",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059366981595692",
+      "streamdocsId": "72059366981595692",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "전기및전자공학부"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목이수요건",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367001966182",
+      "streamdocsId": "72059367001966182",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목일람표",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004374785",
+      "streamdocsId": "72059367004374785",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    },
+    {
+      "year": 2025,
+      "department": "ME",
+      "departmentLabel": "기계공학과",
+      "documentType": "교과목개요",
+      "pageUrl": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=1772966678208",
+      "viewerUrl": "https://pdfviewer.kaist.ac.kr/streamdocs/view/sd;streamdocsId=72059367004375477",
+      "streamdocsId": "72059367004375477",
+      "noticeLine": null,
+      "selectedDepartments": [
+        "기계공학과"
+      ],
+      "collectionStatus": "captured",
+      "notes": []
+    }
+  ]
+}

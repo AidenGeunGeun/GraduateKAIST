@@ -24,6 +24,14 @@ export type Gyeyol = "인문" | "사회" | "예술";
 
 export type TrackType = "심화전공" | "부전공" | "복수전공" | "자유융합전공";
 
+export type SupportedProgramType = Extract<TrackType, "심화전공" | "부전공" | "복수전공">;
+
+export type SupportedDepartment = "AE" | "ME" | "CS" | "EE";
+
+export type DepartmentSelection = SupportedDepartment | "OTHER";
+
+export type ProgramSupportStatus = "supported" | "partial" | "common-only" | "unsupported";
+
 export type AuCategoryName = "인성/리더십" | "즐거운" | "신나는";
 
 export interface AuCategoryRequirement {
@@ -51,6 +59,90 @@ export interface TrackModification {
   연구Required?: number;
 }
 
+export interface PlannerSelection {
+  department: DepartmentSelection;
+  admissionYear: number;
+  track: TrackType;
+}
+
+export interface CourseCatalogEntry {
+  canonicalCode: string;
+  aliases: string[];
+  nameKo: string;
+  nameEn: string;
+  offeringDepartments: string[];
+  observedYears: number[];
+  observedSemesters: Season[];
+  rawCategoryLabels: string[];
+  level: number;
+  crossListings: string[];
+  sourceRefs: string[];
+}
+
+export interface ProgramRequiredCourseSlot {
+  id: string;
+  label: string;
+  canonicalCode: string;
+  acceptedCourseCodes: string[];
+  sourceRefs: string[];
+}
+
+export interface ProgramCreditBucketRule {
+  id: string;
+  label: string;
+  requiredCredits: number;
+  requiredCourseCount?: number;
+  eligiblePrefixes: string[];
+  minimumLevel: number;
+  allowedCategories: Array<"전공필수" | "전공선택">;
+  eligibleCourseCodes: string[];
+  excludedCourseCodes: string[];
+  manualReviewOnlyCourseCodes: string[];
+  manualReviewOnlyReason?: string;
+  sourceRefs: string[];
+}
+
+export interface ProgramEquivalency {
+  slotId: string;
+  canonicalCode: string;
+  equivalentCodes: string[];
+  note: string;
+  sourceRefs: string[];
+}
+
+export interface DepartmentProgramRequirement {
+  department: SupportedDepartment;
+  admissionYearRange: [number, number];
+  programType: SupportedProgramType;
+  displayName: string;
+  supportStatus: Extract<ProgramSupportStatus, "supported" | "partial">;
+  requiredCourseSlots: ProgramRequiredCourseSlot[];
+  creditBuckets: ProgramCreditBucketRule[];
+  equivalencies: ProgramEquivalency[];
+  knownLimitations: string[];
+  sourceRefs: string[];
+}
+
+export interface SupportManifestEntry {
+  department: SupportedDepartment;
+  admissionYearRange: [number, number];
+  supportedProgramTypes: SupportedProgramType[];
+  supportStatus: Extract<ProgramSupportStatus, "supported" | "partial" | "common-only">;
+  knownLimitations: string[];
+  sourceRefs: string[];
+}
+
+export interface ProgramSupportInfo {
+  selection: PlannerSelection;
+  status: ProgramSupportStatus;
+  title: string;
+  message: string;
+  knownLimitations: string[];
+  datasetVersion: string;
+  lastGeneratedAt: string;
+  sourceRefs: string[];
+}
+
 export interface RequirementSet {
   admissionYearRange: [number, number];
   totalCredits: number;
@@ -59,6 +151,9 @@ export interface RequirementSet {
   hasHssCoreTypeRequirement: boolean;
   isDualMajor: boolean;
   common: CommonRequirements;
+  selectedProgram?: PlannerSelection;
+  programSupport?: ProgramSupportInfo;
+  departmentRequirement?: DepartmentProgramRequirement | null;
 }
 
 export interface CourseInfo {
@@ -76,7 +171,42 @@ export interface CategoryResult {
   details: string;
 }
 
-export type WarningType = "HSS_DISTRIBUTION_INCOMPLETE";
+export interface ProgramRequiredCourseResult {
+  id: string;
+  label: string;
+  satisfied: boolean;
+  acceptedCourseCodes: string[];
+  matchedCourse?: CourseInfo;
+  detail: string;
+}
+
+export interface ProgramBucketResult {
+  id: string;
+  label: string;
+  earnedCredits: number;
+  requiredCredits: number;
+  matchedCourseCount: number;
+  requiredCourseCount?: number;
+  fulfilled: boolean;
+  matchedCourses: CourseInfo[];
+  detail: string;
+}
+
+export interface ProgramAnalysisResult {
+  displayName: string;
+  supportStatus: ProgramSupportStatus;
+  requiredCourses: ProgramRequiredCourseResult[];
+  creditBuckets: ProgramBucketResult[];
+  eligibleMajorCredits: number;
+  requiredMajorCredits: number;
+  manualReviewNotices: string[];
+  knownLimitations: string[];
+}
+
+export type WarningType =
+  | "HSS_DISTRIBUTION_INCOMPLETE"
+  | "PROGRAM_MANUAL_REVIEW"
+  | "PROGRAM_PARTIAL_SUPPORT";
 
 export interface Warning {
   type: WarningType;
@@ -103,6 +233,8 @@ export interface AnalysisResult {
   categories: CategoryResult[];
   warnings: Warning[];
   overallStatus: "fulfilled" | "in_progress" | "behind";
+  programSupport?: ProgramSupportInfo;
+  programAnalysis?: ProgramAnalysisResult | null;
 }
 
 export interface HssResult {

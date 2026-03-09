@@ -1,0 +1,23 @@
+{
+  "version": 3,
+  "collectedAt": "2026-03-09",
+  "entryUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+  "tool": "agent-browser",
+  "verifiedCues": [
+    "ERP page exposed filters for 학년도, 학기, 개설학과, 과정구분, 과목구분, 교과목명, 교과목코드, 담당교수",
+    "results table exposed 개설년도, 개설학기, 개설학과, 과정구분, 과목구분, 교과목 코드, 교과목명, 상호인정",
+    "Spring 2025 prefix queries returned stable sample rows for AE/ME/CS/EE"
+  ],
+  "notes": [
+    "The year and semester selectors behaved like multi-select widgets; captured uiFormValues preserve this quirk for provenance.",
+    "2025 fall attempts still returned spring rows in the visible sample and remain unresolved supporting provenance rather than trusted fall snapshots.",
+    "ERP category labels are preserved as raw catalog labels only and must not be treated as graduation truth without bulletin-backed rule interpretation.",
+    "Exact course-code snapshots for the legacy in-scope course list are stored in erp-course-code-snapshots-2025-spring.json to preserve row-level ERP evidence, including zero-result attempts and 2026 co-selection quirks.",
+    "erp-row-evidence-map.json now grades each four-department spring prefix snapshot as supporting provenance and keeps the fall 2025 instability explicit for later interpretation work."
+  ],
+  "artifacts": [
+    "references/kaist-data/raw/erp-query-inventory.json",
+    "references/kaist-data/raw/erp-course-code-snapshots-2025-spring.json",
+    "references/kaist-data/raw/erp-row-evidence-map.json"
+  ]
+}

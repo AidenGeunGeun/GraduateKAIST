@@ -1,0 +1,295 @@
+{
+  "version": 2,
+  "entries": [
+    {
+      "sourceId": "erp-snapshot-2025-spring-AE",
+      "collectionStatus": "captured",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "AE"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "observedTotalCount": 359,
+      "sampleRows": [
+        {
+          "courseCode": "AE.20001",
+          "courseName": "기초항공프로젝트",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공선택"
+        },
+        {
+          "courseCode": "AE.21000",
+          "courseName": "항공우주 열역학",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공필수"
+        },
+        {
+          "courseCode": "AE.23000",
+          "courseName": "항공우주 재료역학",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공선택"
+        },
+        {
+          "courseCode": "AE.28000",
+          "courseName": "항공우주 응용S/W",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공선택"
+        },
+        {
+          "courseCode": "AE.30000",
+          "courseName": "비행역학 프로젝트",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공필수"
+        }
+      ],
+      "notes": [
+        "Row extraction deduplicated section variants by course code/name for summary storage.",
+        "These spring prefix snapshots are broad supporting provenance only and must be paired with bulletin-backed interpretation before any graduation claim."
+      ],
+      "evidenceGrade": "supporting-broad-spring-snapshot"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-spring-ME",
+      "collectionStatus": "captured",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "ME"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "observedTotalCount": 603,
+      "sampleRows": [
+        {
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "offeringDepartment": "기계공학과",
+          "rawCategoryLabel": "전공필수"
+        },
+        {
+          "courseCode": "ME.20007",
+          "courseName": "응용전자공학",
+          "offeringDepartment": "기계공학과",
+          "rawCategoryLabel": "전공선택"
+        },
+        {
+          "courseCode": "ME.20011",
+          "courseName": "열역학",
+          "offeringDepartment": "기계공학과",
+          "rawCategoryLabel": "전공선택"
+        }
+      ],
+      "notes": [
+        "Visible rows before footer covered three distinct course codes.",
+        "These spring prefix snapshots are broad supporting provenance only and must be paired with bulletin-backed interpretation before any graduation claim."
+      ],
+      "evidenceGrade": "supporting-broad-spring-snapshot"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-spring-CS",
+      "collectionStatus": "captured",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "CS"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "observedTotalCount": 584,
+      "sampleRows": [
+        {
+          "courseCode": "CS.10001",
+          "courseName": "프로그래밍기초",
+          "offeringDepartment": "전산학부",
+          "rawCategoryLabel": "기초필수"
+        }
+      ],
+      "notes": [
+        "Visible rows were section variants A-G of the same course; summary stores one distinct course row.",
+        "These spring prefix snapshots are broad supporting provenance only and must be paired with bulletin-backed interpretation before any graduation claim."
+      ],
+      "evidenceGrade": "supporting-broad-spring-snapshot"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-spring-EE",
+      "collectionStatus": "captured",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "EE"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "observedTotalCount": 908,
+      "sampleRows": [
+        {
+          "courseCode": "EE.20001",
+          "courseName": "회로이론",
+          "offeringDepartment": "전기및전자공학부",
+          "rawCategoryLabel": "전공필수"
+        },
+        {
+          "courseCode": "EE.20002",
+          "courseName": "신호 및 시스템",
+          "offeringDepartment": "전기및전자공학부",
+          "rawCategoryLabel": "전공필수"
+        },
+        {
+          "courseCode": "EE.20004",
+          "courseName": "전기자기학 I",
+          "offeringDepartment": "전기및전자공학부",
+          "rawCategoryLabel": "전공필수"
+        },
+        {
+          "courseCode": "EE.20009",
+          "courseName": "전자공학을 위한 프로그래밍 구조",
+          "offeringDepartment": "전기및전자공학부",
+          "rawCategoryLabel": "전공필수"
+        }
+      ],
+      "notes": [
+        "Visible rows before footer covered four distinct course codes.",
+        "These spring prefix snapshots are broad supporting provenance only and must be paired with bulletin-backed interpretation before any graduation claim."
+      ],
+      "evidenceGrade": "supporting-broad-spring-snapshot"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-fall-AE-attempt",
+      "collectionStatus": "needs-manual-recheck",
+      "requested": {
+        "year": 2025,
+        "semester": "가을학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "AE"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,가을학기,"
+      },
+      "observedTotalCount": 541,
+      "returnedSemesterSample": "봄학기",
+      "sampleRows": [
+        {
+          "courseCode": "AE.20001",
+          "courseName": "기초항공프로젝트",
+          "offeringDepartment": "항공우주공학과",
+          "rawCategoryLabel": "전공선택"
+        }
+      ],
+      "notes": [
+        "Requested fall semester but visible sample rows remained spring semester.",
+        "Treat this as unresolved supporting provenance only; it must not be used as trusted fall-semester row evidence."
+      ],
+      "evidenceGrade": "supporting-unresolved-fall-attempt"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-fall-ME-attempt",
+      "collectionStatus": "needs-manual-recheck",
+      "requested": {
+        "year": 2025,
+        "semester": "가을학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "ME"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,가을학기,"
+      },
+      "observedTotalCount": 898,
+      "returnedSemesterSample": "봄학기",
+      "sampleRows": [
+        {
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "offeringDepartment": "기계공학과",
+          "rawCategoryLabel": "전공필수"
+        }
+      ],
+      "notes": [
+        "Requested fall semester but visible sample rows remained spring semester.",
+        "Treat this as unresolved supporting provenance only; it must not be used as trusted fall-semester row evidence."
+      ],
+      "evidenceGrade": "supporting-unresolved-fall-attempt"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-fall-CS-attempt",
+      "collectionStatus": "needs-manual-recheck",
+      "requested": {
+        "year": 2025,
+        "semester": "가을학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "CS"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,가을학기,"
+      },
+      "observedTotalCount": 867,
+      "returnedSemesterSample": "봄학기",
+      "sampleRows": [
+        {
+          "courseCode": "CS.10001",
+          "courseName": "프로그래밍기초",
+          "offeringDepartment": "전산학부",
+          "rawCategoryLabel": "기초필수"
+        }
+      ],
+      "notes": [
+        "Requested fall semester but visible sample rows remained spring semester.",
+        "Treat this as unresolved supporting provenance only; it must not be used as trusted fall-semester row evidence."
+      ],
+      "evidenceGrade": "supporting-unresolved-fall-attempt"
+    },
+    {
+      "sourceId": "erp-snapshot-2025-fall-EE-attempt",
+      "collectionStatus": "needs-manual-recheck",
+      "requested": {
+        "year": 2025,
+        "semester": "가을학기",
+        "departmentFilter": "[전체]",
+        "courseCodePrefix": "EE"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,가을학기,"
+      },
+      "observedTotalCount": 1362,
+      "returnedSemesterSample": "봄학기",
+      "sampleRows": [
+        {
+          "courseCode": "EE.20001",
+          "courseName": "회로이론",
+          "offeringDepartment": "전기및전자공학부",
+          "rawCategoryLabel": "전공필수"
+        }
+      ],
+      "notes": [
+        "Requested fall semester but visible sample rows remained spring semester.",
+        "Treat this as unresolved supporting provenance only; it must not be used as trusted fall-semester row evidence."
+      ],
+      "evidenceGrade": "supporting-unresolved-fall-attempt"
+    }
+  ]
+}

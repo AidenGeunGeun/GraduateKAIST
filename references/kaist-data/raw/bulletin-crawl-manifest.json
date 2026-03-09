@@ -1,0 +1,43 @@
+{
+  "version": 3,
+  "collectedAt": "2026-03-09",
+  "workflow": {
+    "entryUrlPattern": "https://bulletin.kaist.ac.kr/com/lgin/SsoCtr/initPageWork.do?requestTimeStr=<timestamp>",
+    "rejectedEntryUrl": "https://bulletin.kaist.ac.kr/com/curriculum/main/main.do",
+    "tool": "agent-browser",
+    "verifiedCues": [
+      "학사요람 landing page rendered from the initPageWork.do SSO entry",
+      "과거 학사요람 조회 revealed year buttons including 2025/2024/2023/2022/2021/2020/2019",
+      "전공별 교과과정 exposed target department tree entries",
+      "viewer iframes exposed streamdocsId values that can be queried via the StreamDocs metadata endpoint"
+    ]
+  },
+  "scope": {
+    "departments": [
+      "AE",
+      "ME",
+      "CS",
+      "EE"
+    ],
+    "yearsCollected": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "documentTypesCollected": [
+      "교과목이수요건",
+      "교과목일람표",
+      "교과목개요"
+    ]
+  },
+  "notes": [
+    "Wave 1.5 keeps the 2019-2025 source-slot matrix explicit for every AE/ME/CS/EE x year x document-type slot in bulletin-document-inventory.json.",
+    "Repeated 2019 re-checks confirmed that the live 2019 major tree currently surfaces 전산학부 and 전기및전자공학부, but not AE/ME labels; the 2019 AE/ME slots are therefore classified as missing in the current verified workflow.",
+    "2019 CS/EE list and overview tabs became reachable after department selection and now have captured viewer provenance.",
+    "The former 2020/2021/2023/2024 duplicate suspicions were resolved by observing that document-tab clicks append new viewer iframes instead of replacing the first iframe."
+  ]
+}

@@ -11,25 +11,41 @@ import { AuTracker } from "@/app/components/dashboard/AuTracker";
 import { CategoryGrid } from "@/app/components/dashboard/CategoryGrid";
 import { CourseListTable } from "@/app/components/dashboard/CourseListTable";
 import { GpaSection } from "@/app/components/dashboard/GpaSection";
+import { ProgramRequirementSection } from "@/app/components/dashboard/ProgramRequirementSection";
 import { StatusHero } from "@/app/components/dashboard/StatusHero";
 import { WarningsPanel } from "@/app/components/dashboard/WarningsPanel";
 import { AdSlot } from "@/app/components/shared/AdSlot";
+import { Badge } from "@/app/components/shared/Badge";
 import { Footer } from "@/app/components/shared/Footer";
 import { AnalyzeButton } from "@/app/components/upload/AnalyzeButton";
 import { AdmissionYearSelector } from "@/app/components/upload/AdmissionYearSelector";
+import { DepartmentSelector } from "@/app/components/upload/DepartmentSelector";
 import { FileUpload } from "@/app/components/upload/FileUpload";
 import { PrivacyBadge } from "@/app/components/upload/PrivacyBadge";
 import { TrackSelector } from "@/app/components/upload/TrackSelector";
-import { applyTrackModification, getRequirements } from "@/domain/configs/requirements";
+import {
+  buildPlannerRequirementSet,
+  getDepartmentLabel,
+  getProgramSupport,
+  getSupportedDepartments,
+} from "@/domain/configs/planner";
 import { Semester } from "@/domain/models/Semester";
 import { Transcript } from "@/domain/models/Transcript";
 import { AuTracker as AuTrackerService } from "@/domain/services/AuTracker";
 import { GpaCalculator } from "@/domain/services/GpaCalculator";
 import { HssDistributionChecker } from "@/domain/services/HssDistributionChecker";
 import { RequirementAnalyzer } from "@/domain/services/RequirementAnalyzer";
-import type { AnalysisResult, AuResult, HssResult, ParseWarning, TrackType } from "@/domain/types";
+import type {
+  AnalysisResult,
+  AuResult,
+  DepartmentSelection,
+  HssResult,
+  ParseWarning,
+  TrackType,
+} from "@/domain/types";
 
 interface DashboardState {
+  department: DepartmentSelection;
   track: TrackType;
   admissionYear: number;
   analysisResult: AnalysisResult;
@@ -56,6 +72,7 @@ function sectionStyle(delay: number): CSSProperties {
 
 export default function Home() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedDepartment, setSelectedDepartment] = useState<DepartmentSelection | null>(null);
   const [selectedTrack, setSelectedTrack] = useState<TrackType>("심화전공");
   const [admissionYear, setAdmissionYear] = useState<number | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
@@ -63,16 +80,22 @@ export default function Home() {
   const [dashboard, setDashboard] = useState<DashboardState | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const canAnalyze = selectedFile !== null && admissionYear !== null && !loading;
+  const canAnalyze = selectedFile !== null && admissionYear !== null && selectedDepartment !== null && !loading;
+  const supportPreview =
+    selectedDepartment !== null && admissionYear !== null
+      ? getProgramSupport({ department: selectedDepartment, admissionYear, track: selectedTrack })
+      : null;
+  const departmentOptions = getSupportedDepartments();
 
   const handleAnalyze = async () => {
-    if (!selectedFile || !admissionYear) {
+    if (!selectedFile || !admissionYear || !selectedDepartment) {
       return;
     }
 
     setLoading(true);
     setAnalyzeError(null);
     analyticsTrack("analysis_started", {
+      department: selectedDepartment,
       track: selectedTrack,
       admissionYear,
     });
@@ -94,8 +117,11 @@ export default function Home() {
       }
 
       const transcript = Transcript.from(parseResult.records);
-      const baseRequirementSet = getRequirements(admissionYear);
-      const requirementSet = applyTrackModification(baseRequirementSet, selectedTrack);
+      const requirementSet = buildPlannerRequirementSet({
+        department: selectedDepartment,
+        admissionYear,
+        track: selectedTrack,
+      });
       const analysisResult = RequirementAnalyzer.analyze(transcript, requirementSet);
       const cumulativeGpa = GpaCalculator.calculateCumulative(transcript);
       const semesterTrend = [...GpaCalculator.calculateBySemester(transcript).entries()]
@@ -113,10 +139,18 @@ export default function Home() {
       const hssResult = HssDistributionChecker.check(hssRecords, requirementSet.isDualMajor);
       const currentGpaCredits = transcript.gpaRecords().reduce((sum, record) => sum + record.credits, 0);
 
-      const informationalNotices = [
-        "공통학사요람 기준입니다. 학과별 세부 요건은 학과 이수요건을 참조하세요.",
-        "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
-      ];
+      const informationalNotices =
+        analysisResult.programSupport?.status === "supported"
+          ? [
+              "공통학사요람 + 선택한 학과의 오프라인 데이터셋 기준입니다. 최종 졸업 판정은 학과/학사팀 확인이 필요합니다.",
+              ...analysisResult.programSupport.knownLimitations,
+              "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
+            ]
+          : [
+              analysisResult.programSupport?.message ??
+                "선택한 조합은 공통학사요람 기준으로만 분석합니다. 학과별 세부 요건은 학과 이수요건을 참조하세요.",
+              "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
+            ];
 
       if (requirementSet.hasHssCoreTypeRequirement) {
         informationalNotices.push("인선 핵심/융합/일반 유형 구분은 성적표에서 확인할 수 없습니다.");
@@ -129,6 +163,7 @@ export default function Home() {
       }
 
       setDashboard({
+        department: selectedDepartment,
         track: selectedTrack,
         admissionYear,
         analysisResult,
@@ -170,6 +205,7 @@ export default function Home() {
   const resetToUpload = () => {
     setDashboard(null);
     setSelectedFile(null);
+    setSelectedDepartment(null);
     setSelectedTrack("심화전공");
     setAdmissionYear(null);
     setFileError(null);
@@ -193,10 +229,35 @@ export default function Home() {
               </div>
 
               <div className="rounded-lg border border-accent/30 bg-accent/10 px-3 py-2 text-xs text-accent">
-                공통학사요람만 지원합니다.
+                <div className="flex flex-wrap items-center gap-2">
+                  <Badge
+                    variant={
+                      supportPreview === null
+                        ? "neutral"
+                        : supportPreview.status === "supported"
+                          ? "supported"
+                          : supportPreview.status === "partial"
+                            ? "partial"
+                            : supportPreview.status === "common-only"
+                              ? "neutral"
+                              : "danger"
+                    }
+                  >
+                    {supportPreview?.title ?? "1차 지원 범위"}
+                  </Badge>
+                  <span className="text-text">
+                    {supportPreview?.message ?? "현재는 공통 이수요건 분석이 기본이며, 학과 규칙은 공식 소스 코퍼스를 정리 중입니다."}
+                  </span>
+                </div>
               </div>
 
               <FileUpload file={selectedFile} error={fileError} onSelectFile={handleFileSelect} />
+
+              <DepartmentSelector
+                value={selectedDepartment}
+                options={departmentOptions}
+                onChange={setSelectedDepartment}
+              />
 
               <TrackSelector value={selectedTrack} onChange={handleTrackChange} />
 
@@ -255,6 +316,8 @@ export default function Home() {
               ← 다시 분석하기
             </button>
             <div className="flex items-center gap-2 text-xs text-text-muted">
+              <span>{getDepartmentLabel(dashboard.department)}</span>
+              <span>·</span>
               <span>{dashboard.track}</span>
               <span>·</span>
               <span>{dashboard.admissionYear}학번 기준</span>
@@ -325,6 +388,13 @@ export default function Home() {
                   semesterTrend={dashboard.semesterTrend}
                   currentGpaCredits={dashboard.currentGpaCredits}
                   remainingCredits={remainingCredits}
+                />
+              </div>
+
+              <div className="section-stagger" style={sectionStyle(110)}>
+                <ProgramRequirementSection
+                  support={dashboard.analysisResult.programSupport}
+                  analysis={dashboard.analysisResult.programAnalysis}
                 />
               </div>
 

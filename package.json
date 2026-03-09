@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "data:generate": "node scripts/generate-kaist-data.mjs",
+    "data:validate": "node scripts/validate-kaist-data.mjs"
   },
   "dependencies": {
     "@fontsource/pretendard": "^5.2.5",

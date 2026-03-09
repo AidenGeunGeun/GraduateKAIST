@@ -91,4 +91,19 @@ describe("AU tracking (4AU common-only)", () => {
     expect(auResult.categories.즐거운.fulfilled).toBe(false);
     expect(auResult.fulfilled).toBe(false);
   });
+
+  it("recognizes 인성/리더십 with slash in course name", () => {
+    const requirements = getRequirements(2022);
+    const records = [
+      createRecord({ nameKo: "인성/리더십 I", credits: 0, au: 1, gradeFinal: Grade.from("S") }),
+      createRecord({ nameKo: "인성/리더십 II", credits: 0, au: 1, gradeFinal: Grade.from("S") }),
+      createRecord({ nameKo: "즐거운 대학생활", credits: 0, au: 1, gradeFinal: Grade.from("S") }),
+      createRecord({ nameKo: "신나는 대학생활", credits: 0, au: 1, gradeFinal: Grade.from("S") }),
+    ];
+
+    const { auResult } = AuTracker.track(records, requirements.auCategories, true);
+    expect(auResult.categories["인성/리더십"].earned).toBe(2);
+    expect(auResult.categories["인성/리더십"].fulfilled).toBe(true);
+    expect(auResult.fulfilled).toBe(true);
+  });
 });

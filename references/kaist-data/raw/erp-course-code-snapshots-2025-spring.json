@@ -1,0 +1,1139 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "canonicalCode": "AE208",
+      "erpCourseCode": "AE.20800",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.20800"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE210",
+      "erpCourseCode": "AE.21000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.21000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE220",
+      "erpCourseCode": "AE.22000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.22000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE230",
+      "erpCourseCode": "AE.23000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.23000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공선택",
+          "courseCode": "AE.23000",
+          "courseName": "항공우주 재료역학",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공선택",
+            "AE.23000",
+            "항공우주 재료역학",
+            "AE230",
+            "B8.230",
+            "3.0 : 0.0 : 3.0",
+            "[AE.23000],[ME.20031],AE.23000,MAE.20030",
+            "이전윤",
+            "0",
+            "45",
+            "화 09:00~10:30 목 09:00~10:30",
+            "(E11) 창의학습관 (102호)강의실",
+            "화 09:00~11:45",
+            "(E11) 창의학습관 (102호)강의실",
+            "A-F",
+            "대면"
+          ]
+        },
+        {
+          "rowNumber": "2",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공선택",
+          "courseCode": "AE.23000",
+          "courseName": "항공우주 재료역학",
+          "rawCells": [
+            "2",
+            "2026",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공선택",
+            "AE.23000",
+            "항공우주 재료역학",
+            "N"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "AE300",
+      "erpCourseCode": "AE.30000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.30000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "AE.30000",
+          "courseName": "비행역학 프로젝트",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공필수",
+            "AE.30000",
+            "비행역학 프로젝트",
+            "AE300",
+            "B8.300",
+            "3.0 : 1.0 : 3.0",
+            "[AE.30000],[AE.30000],MAE.30065",
+            "이동헌",
+            "0",
+            "26",
+            "월 13:00~14:30 수 13:00~14:30 금 09:00~10:00",
+            "(N7-2) 기계공학동 1316",
+            "A-F",
+            "대면"
+          ]
+        },
+        {
+          "rowNumber": "2",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "AE.30000",
+          "courseName": "비행역학 프로젝트",
+          "rawCells": [
+            "2",
+            "2026",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공필수",
+            "AE.30000",
+            "비행역학 프로젝트",
+            "N"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "AE307",
+      "erpCourseCode": "AE.30700",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.30700"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE311",
+      "erpCourseCode": "AE.31100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.31100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE321",
+      "erpCourseCode": "AE.32100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.32100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE330",
+      "erpCourseCode": "AE.33000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.33000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "AE.33000",
+          "courseName": "항공우주 구조역학Ⅰ",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공필수",
+            "AE.33000",
+            "항공우주 구조역학Ⅰ",
+            "AE330",
+            "B8.330",
+            "3.0 : 0.0 : 3.0",
+            "[AE.33000],MAE.30035",
+            "김천곤",
+            "0",
+            "28",
+            "월 09:00~10:30 수 09:00~10:30",
+            "(N7-2) 기계공학동 2320",
+            "월 09:00~11:45",
+            "A-F",
+            "대면"
+          ]
+        },
+        {
+          "rowNumber": "2",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "AE.33000",
+          "courseName": "항공우주 구조역학Ⅰ",
+          "rawCells": [
+            "2",
+            "2026",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공필수",
+            "AE.33000",
+            "항공우주 구조역학Ⅰ",
+            "N"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "AE331",
+      "erpCourseCode": "AE.33100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.33100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE370",
+      "erpCourseCode": "AE.37000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.37000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공선택",
+          "courseCode": "AE.37000",
+          "courseName": "수치해석",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공선택",
+            "AE.37000",
+            "수치해석",
+            "AE370",
+            "B8.370",
+            "3.0 : 0.0 : 3.0",
+            "[AE.37000],[ME.30001],AE.37000,MAE.30001",
+            "조성민",
+            "0",
+            "10",
+            "화 10:30~12:00 목 10:30~12:00",
+            "(N7-2) 기계공학동 2320",
+            "목 09:00~11:45",
+            "A-F",
+            "대면"
+          ]
+        },
+        {
+          "rowNumber": "2",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공선택",
+          "courseCode": "AE.37000",
+          "courseName": "수치해석",
+          "rawCells": [
+            "2",
+            "2026",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공선택",
+            "AE.37000",
+            "수치해석",
+            "N"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "AE400",
+      "erpCourseCode": "AE.40000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.40000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "항공우주공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "AE.40000",
+          "courseName": "항공우주 시스템 설계Ⅰ",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "항공우주공학과",
+            "학사과정",
+            "전공필수",
+            "AE.40000",
+            "항공우주 시스템 설계Ⅰ",
+            "AE400",
+            "B8.400",
+            "2.0 : 3.0 : 3.0",
+            "[AE.40000],[AE.40002],AE.40000,MAE.40005",
+            "이대영",
+            "0",
+            "27",
+            "월 16:00~18:00 금 10:00~13:00",
+            "(E11) 창의학습관 210 (N7-2) 기계공학동 2320",
+            "월 16:00~18:45",
+            "(E11) 창의학습관 (210호)강의실",
+            "A-F",
+            "대면"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "AE401",
+      "erpCourseCode": "AE.40100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.40100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "AE490",
+      "erpCourseCode": "AE.49000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "AE.49000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "COE491",
+      "erpCourseCode": "COE.49100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "COE.49100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS204",
+      "erpCourseCode": "CS.20400",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.20400"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS206",
+      "erpCourseCode": "CS.20600",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.20600"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS300",
+      "erpCourseCode": "CS.30000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.30000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS311",
+      "erpCourseCode": "CS.31100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.31100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS320",
+      "erpCourseCode": "CS.32000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.32000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS350",
+      "erpCourseCode": "CS.35000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.35000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS360",
+      "erpCourseCode": "CS.36000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.36000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS374",
+      "erpCourseCode": "CS.37400",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.37400"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS423",
+      "erpCourseCode": "CS.42300",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.42300"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "CS490",
+      "erpCourseCode": "CS.49000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "CS.49000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE202",
+      "erpCourseCode": "EE.20200",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.20200"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE204",
+      "erpCourseCode": "EE.20400",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.20400"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE305",
+      "erpCourseCode": "EE.30500",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.30500"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE312",
+      "erpCourseCode": "EE.31200",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.31200"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE321",
+      "erpCourseCode": "EE.32100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.32100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE372",
+      "erpCourseCode": "EE.37200",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.37200"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE405",
+      "erpCourseCode": "EE.40500",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.40500"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE475",
+      "erpCourseCode": "EE.47500",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.47500"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "EE490",
+      "erpCourseCode": "EE.49000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "EE.49000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME200",
+      "erpCourseCode": "ME.20000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.20000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": [
+        {
+          "rowNumber": "1",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "기계공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "rawCells": [
+            "1",
+            "2025",
+            "봄학기",
+            "기계공학과",
+            "학사과정",
+            "전공필수",
+            "ME.20000",
+            "기계기초실습",
+            "A",
+            "ME200",
+            "B7.200",
+            "2.0 : 3.0 : 3.0",
+            "[ME.20000],MAE.20000",
+            "김산하",
+            "26",
+            "26",
+            "월 13:00~14:30 월 14:30~15:30 수 13:00~15:30",
+            "(E11) 창의학습관 406 (E11) 창의학습관 #406",
+            "월 13:00~16:00",
+            "(E11) 창의학습관 (104호)강의실-터만홀",
+            "A-F",
+            "*KAIST Mechanical Engineering Undergraduate students only *Student ID Number last digit: 1,3,5,7,9 예상인원: 26",
+            "(온라인)비실시간+실시간 혼합 수업"
+          ]
+        },
+        {
+          "rowNumber": "2",
+          "year": "2025",
+          "semester": "봄학기",
+          "offeringDepartment": "기계공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "rawCells": [
+            "2",
+            "2025",
+            "봄학기",
+            "기계공학과",
+            "학사과정",
+            "전공필수",
+            "ME.20000",
+            "기계기초실습",
+            "B",
+            "N"
+          ]
+        },
+        {
+          "rowNumber": "3",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "기계공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "rawCells": [
+            "3",
+            "2026",
+            "봄학기",
+            "기계공학과",
+            "학사과정",
+            "전공필수",
+            "ME.20000",
+            "기계기초실습",
+            "A",
+            "N"
+          ]
+        },
+        {
+          "rowNumber": "4",
+          "year": "2026",
+          "semester": "봄학기",
+          "offeringDepartment": "기계공학과",
+          "programType": "학사과정",
+          "rawCategoryLabel": "전공필수",
+          "courseCode": "ME.20000",
+          "courseName": "기계기초실습",
+          "rawCells": [
+            "4",
+            "2026",
+            "봄학기",
+            "기계공학과",
+            "학사과정",
+            "전공필수",
+            "ME.20000",
+            "기계기초실습",
+            "B",
+            "N"
+          ]
+        }
+      ]
+    },
+    {
+      "canonicalCode": "ME205",
+      "erpCourseCode": "ME.20500",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.20500"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME211",
+      "erpCourseCode": "ME.21100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.21100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME221",
+      "erpCourseCode": "ME.22100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.22100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME231",
+      "erpCourseCode": "ME.23100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.23100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME301",
+      "erpCourseCode": "ME.30100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.30100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME311",
+      "erpCourseCode": "ME.31100",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.31100"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME320",
+      "erpCourseCode": "ME.32000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.32000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME340",
+      "erpCourseCode": "ME.34000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.34000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME350",
+      "erpCourseCode": "ME.35000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.35000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME410",
+      "erpCourseCode": "ME.41000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.41000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    },
+    {
+      "canonicalCode": "ME490",
+      "erpCourseCode": "ME.49000",
+      "requested": {
+        "year": 2025,
+        "semester": "봄학기",
+        "departmentFilter": "[전체]",
+        "courseCode": "ME.49000"
+      },
+      "pageUrl": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+      "uiFormValues": {
+        "year": "2026,2025,",
+        "semester": "봄학기,"
+      },
+      "totalCount": null,
+      "rows": []
+    }
+  ]
+}
