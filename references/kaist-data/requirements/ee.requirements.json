@@ -1,0 +1,128 @@
+{
+  "department": "EE",
+  "departmentNameKo": "전기및전자공학부",
+  "source": "ee.kaist.ac.kr/under-req/ 공식 페이지",
+  "sourceRefs": ["ee-official-requirements"],
+  "notes": {
+    "심화전공": "추가 학점 방식. 전공 50학점 초과 EE 전공과목 12학점 이상.",
+    "전필_2016_2017": "6과목 고정: EE201, EE202, EE204, EE209, EE305, EE405",
+    "전필_2018이후": "EE305+EE405 필수 + EE201/202/204/209/210/211 중 3과목 선택 = 15학점"
+  },
+  "yearGroups": [
+    {
+      "id": "ee-2016-2017",
+      "admissionYears": [2016, 2017],
+      "totalCredits": 136,
+      "tracks": {
+        "심화전공": {
+          "전공": {
+            "전필": {
+              "requiredCredits": 18,
+              "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE305", "EE30005", "EE405", "EE40005"]
+            },
+            "전선": { "requiredCredits": 32 }
+          },
+          "심화전공": {
+            "type": "additional",
+            "requiredCredits": 12,
+            "rule": "전공 50학점 초과 EE 전공과목 12학점 이상"
+          },
+          "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+        },
+        "복수전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 18, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE305", "EE30005", "EE405", "EE40005"] },
+              "전선": { "requiredCredits": 32 }
+            },
+            "연구": { "requiredCredits": 0, "exempted": true }
+          },
+          "secondaryMajor": { "totalCredits": 40, "전필포함": 18 }
+        },
+        "부전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 18, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE305", "EE30005", "EE405", "EE40005"] },
+              "전선": { "requiredCredits": 32 }
+            },
+            "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+          },
+          "secondaryMajor": { "totalCredits": 21, "전필포함": 12, "required전필": ["EE305", "EE30005"], "note": "EE305 필수 포함. 타 학사조직 전공과목과의 중복 인정 불가" }
+        },
+        "자유융합전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 18, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE305", "EE30005", "EE405", "EE40005"] },
+              "전선": { "requiredCredits": 32 }
+            },
+            "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+          }
+        }
+      }
+    },
+    {
+      "id": "ee-2018-2022",
+      "admissionYears": [2018, 2019, 2020, 2021, 2022],
+      "totalCredits": 136,
+      "notes": "전필 18→15학점. EE305+EE405 필수 + 선택 3과목.",
+      "tracks": {
+        "심화전공": {
+          "전공": {
+            "전필": {
+              "requiredCredits": 15,
+              "required": ["EE305", "EE30005", "EE405", "EE40005"],
+              "selectFrom": {
+                "count": 3,
+                "credits": 6,
+                "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE210", "EE20010", "EE211", "EE20011"]
+              }
+            },
+            "전선": { "requiredCredits": 35 }
+          },
+          "심화전공": {
+            "type": "additional",
+            "requiredCredits": 12,
+            "rule": "전공 50학점 초과 EE 전공과목 12학점 이상"
+          },
+          "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+        },
+        "복수전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 15, "required": ["EE305", "EE30005", "EE405", "EE40005"], "selectFrom": { "count": 3, "credits": 6, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE210", "EE20010", "EE211", "EE20011"] } },
+              "전선": { "requiredCredits": 35 }
+            },
+            "연구": { "requiredCredits": 0, "exempted": true }
+          },
+          "secondaryMajor": { "totalCredits": 40, "전필포함": 15 }
+        },
+        "부전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 15, "required": ["EE305", "EE30005", "EE405", "EE40005"], "selectFrom": { "count": 3, "credits": 6, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE210", "EE20010", "EE211", "EE20011"] } },
+              "전선": { "requiredCredits": 35 }
+            },
+            "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+          },
+          "secondaryMajor": { "totalCredits": 21, "전필포함": 12, "required전필": ["EE305", "EE30005"], "note": "EE30005 필수 포함. 타 학사조직 전공과목과의 중복 인정 불가" }
+        },
+        "자유융합전공": {
+          "primaryMajor": {
+            "전공": {
+              "전필": { "requiredCredits": 15, "required": ["EE305", "EE30005", "EE405", "EE40005"], "selectFrom": { "count": 3, "credits": 6, "courses": ["EE201", "EE20001", "EE202", "EE20002", "EE204", "EE20004", "EE209", "EE20009", "EE210", "EE20010", "EE211", "EE20011"] } },
+              "전선": { "requiredCredits": 35 }
+            },
+            "연구": { "requiredCredits": 3, "courses": ["EE490", "EE.49000", "EE.91000"] }
+          }
+        }
+      }
+    },
+    {
+      "id": "ee-2023-plus",
+      "admissionYears": [2023, 2024, 2025],
+      "totalCredits": 138,
+      "notes": "전공 구조 동일. 졸업학점 138.",
+      "tracks": "SAME_AS_ee-2018-2022"
+    }
+  ]
+}

@@ -2,289 +2,274 @@ import { describe, expect, it } from "vitest";
 
 import { buildPlannerRequirementSet } from "@/domain/configs/planner";
 import { CourseCode } from "@/domain/models/CourseCode";
-import { applyTrackModification, getRequirements } from "@/domain/configs/requirements";
 import { CreditCategory } from "@/domain/models/CreditCategory";
 import { Transcript } from "@/domain/models/Transcript";
 import { RequirementAnalyzer } from "@/domain/services/RequirementAnalyzer";
 import { createRecord } from "@/domain/test-utils/createRecord";
 
-describe("RequirementAnalyzer common-only mode", () => {
-  it("AC1 resolves 2019-2025 to 138 credits and 4 AU", () => {
-    for (const year of [2019, 2020, 2021, 2022, 2023, 2024, 2025]) {
-      const requirements = getRequirements(year);
-      expect(requirements.totalCredits).toBe(138);
-      expect(requirements.auTotal).toBe(4);
-    }
-  });
+function analyze(selection: Parameters<typeof buildPlannerRequirementSet>[0], records: ReturnType<typeof createRecord>[]) {
+  const requirementSet = buildPlannerRequirementSet(selection);
+  if (!requirementSet) {
+    throw new Error("missing requirement set");
+  }
+  return RequirementAnalyzer.analyze(Transcript.from(records), requirementSet);
+}
 
-  it("T7 returns 전공합계 from 전필+전선 with required 40", () => {
-    const transcript = Transcript.from([
-      createRecord({ category: CreditCategory.from("전필"), credits: 15 }),
-      createRecord({ category: CreditCategory.from("전선"), credits: 20 }),
-    ]);
+function aeRequired() {
+  return ["AE210", "AE220", "AE300", "AE208", "AE307", "AE330", "AE400"].map((code) =>
+    createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전필") }),
+  );
+}
 
-    const requirements = applyTrackModification(getRequirements(2022), "심화전공");
-    const result = RequirementAnalyzer.analyze(transcript, requirements);
-    const majorTotal = result.categories.find((category) => category.category === "전공합계");
+function csRequired() {
+  return [
+    createRecord({ courseCode: CourseCode.from("CS204", ""), category: CreditCategory.from("전필"), credits: 3 }),
+    createRecord({ courseCode: CourseCode.from("CS206", ""), category: CreditCategory.from("전필"), credits: 4 }),
+    createRecord({ courseCode: CourseCode.from("CS300", ""), category: CreditCategory.from("전필"), credits: 3 }),
+    createRecord({ courseCode: CourseCode.from("CS311", ""), category: CreditCategory.from("전필"), credits: 3 }),
+    createRecord({ courseCode: CourseCode.from("CS320", ""), category: CreditCategory.from("전필"), credits: 3 }),
+    createRecord({ courseCode: CourseCode.from("CS330", ""), category: CreditCategory.from("전필"), credits: 3 }),
+  ];
+}
 
-    expect(majorTotal?.creditsEarned).toBe(35);
-    expect(majorTotal?.creditsRequired).toBe(40);
-    expect(majorTotal?.fulfilled).toBe(false);
-  });
+function meRequired2020() {
+  return ["ME200", "ME303", "ME400", "ME340"].map((code) =>
+    createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전필") }),
+  );
+}
 
-  it("T3 applies 복수전공 modifications to 인선 and 연구 in analysis", () => {
-    const transcript = Transcript.from([
-      createRecord({ category: CreditCategory.from("인선(인일)"), credits: 12 }),
-      createRecord({ category: CreditCategory.from("자선"), credits: 40 }),
-    ]);
-
-    const requirements = applyTrackModification(getRequirements(2022), "복수전공");
-    const result = RequirementAnalyzer.analyze(transcript, requirements);
-    const hss = result.categories.find((category) => category.category === "인선");
-    const research = result.categories.find((category) => category.category === "연구");
-
-    expect(hss?.creditsRequired).toBe(12);
-    expect(hss?.fulfilled).toBe(true);
-    expect(research?.creditsRequired).toBe(0);
-    expect(research?.fulfilled).toBe(true);
-  });
-
-  it("T6 converts pre-2023 체육 AU to credits", () => {
-    const transcript = Transcript.from([
-      createRecord({ category: CreditCategory.from("자선"), credits: 130 }),
-      createRecord({ nameKo: "체육", credits: 0, au: 2, category: CreditCategory.from("교필") }),
-      createRecord({ nameKo: "체력육성", credits: 0, au: 2, category: CreditCategory.from("교필") }),
-    ]);
-
-    const requirements = applyTrackModification(getRequirements(2022), "심화전공");
-    const result = RequirementAnalyzer.analyze(transcript, requirements);
-
-    expect(result.totalCreditsEarned).toBe(134);
-  });
-
-  it("keeps HSS distribution warning when categories are imbalanced", () => {
-    const transcript = Transcript.from([
-      createRecord({ category: CreditCategory.from("인선(인일)"), credits: 21 }),
-    ]);
-
-    const requirements = applyTrackModification(getRequirements(2020), "심화전공");
-    const result = RequirementAnalyzer.analyze(transcript, requirements);
-
-    expect(result.warnings.some((warning) => warning.type === "HSS_DISTRIBUTION_INCOMPLETE")).toBe(true);
-  });
-});
-
-describe("RequirementAnalyzer supported programs", () => {
-  it("T5 matches AE210 via ME211 equivalency on required-course-slot", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        department: "기계공학과",
-        courseCode: CourseCode.from("ME211", "ME.21100"),
-        category: CreditCategory.from("전필"),
-        nameKo: "열역학",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "AE", admissionYear: 2022, track: "심화전공" }),
-    );
-    const ae210 = result.programAnalysis?.requiredCourses.find((course) => course.id === "ae210");
-
-    expect(result.programSupport?.status).toBe("supported");
-    expect(ae210?.satisfied).toBe(true);
-    expect(ae210?.matchedCourse?.code).toBe("ME211");
-    expect(ae210?.acceptedCourseCodes).toContain("ME211");
-  });
-
-  it("applies AE bucket equivalencies when counting major-elective credits", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        department: "기계공학과",
-        courseCode: CourseCode.from("ME231", "ME.23100"),
-        category: CreditCategory.from("전선"),
-        nameKo: "유체역학",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "AE", admissionYear: 2022, track: "심화전공" }),
-    );
-    const majorElective = result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "major-elective");
-
-    expect(majorElective?.earnedCredits).toBe(3);
-    expect(majorElective?.matchedCourseCount).toBe(1);
-    expect(majorElective?.matchedCourses[0]?.code).toBe("ME231");
-  });
-
-  it("counts AE advanced-major explicit courses even when transcript labels them as 연구", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        courseCode: CourseCode.from("AE401", "AE.40100"),
-        category: CreditCategory.from("연구"),
-        nameKo: "항공우주 시스템 설계 II",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "AE", admissionYear: 2022, track: "심화전공" }),
-    );
-    const advancedMajor = result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major");
-
-    expect(advancedMajor?.earnedCredits).toBe(3);
-    expect(advancedMajor?.matchedCourses[0]?.code).toBe("AE401");
-  });
-
-  it("T6 counts 5 ME basis courses as fulfilled for requiredCourseCount buckets", () => {
-    const transcript = Transcript.from([
-      createRecord({ courseCode: CourseCode.from("ME207", "ME.20700"), category: CreditCategory.from("전선") }),
-      createRecord({ courseCode: CourseCode.from("ME211", "ME.21100"), category: CreditCategory.from("전필") }),
-      createRecord({ courseCode: CourseCode.from("ME221", "ME.22100"), category: CreditCategory.from("전선") }),
-      createRecord({ courseCode: CourseCode.from("ME231", "ME.23100"), category: CreditCategory.from("전선") }),
-      createRecord({ courseCode: CourseCode.from("ME251", "ME.25100"), category: CreditCategory.from("전선") }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "ME", admissionYear: 2022, track: "심화전공" }),
-    );
-    const basisMinimum = result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "basis-minimum");
-
-    expect(basisMinimum).toMatchObject({
-      fulfilled: true,
-      matchedCourseCount: 5,
-      requiredCourseCount: 5,
-      earnedCredits: 15,
-    });
-  });
-
-  it("keeps ME advanced-major bucket in manual review instead of auto-fulfilling it", () => {
-    const transcript = Transcript.from([
-      createRecord({ courseCode: CourseCode.from("ME351", "ME.35100"), category: CreditCategory.from("전선") }),
-      createRecord({ courseCode: CourseCode.from("ME361", "ME.36100"), category: CreditCategory.from("전선") }),
-      createRecord({ courseCode: CourseCode.from("ME370", "ME.37000"), category: CreditCategory.from("전선") }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "ME", admissionYear: 2022, track: "심화전공" }),
-    );
-    const advancedMajor = result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major");
-
-    expect(advancedMajor?.fulfilled).toBe(false);
-    expect(advancedMajor?.detail).toBe("수동 검토 필요");
-    expect(result.warnings.some((warning) => warning.type === "PROGRAM_MANUAL_REVIEW")).toBe(true);
-  });
-
-  it("matches new-format transcript codes against pre-2025 ME required slots", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        courseCode: CourseCode.from("ME.20005", ""),
-        category: CreditCategory.from("전필"),
-        nameKo: "기계공학실험",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "ME", admissionYear: 2022, track: "심화전공" }),
-    );
-    const me303 = result.programAnalysis?.requiredCourses.find((course) => course.id === "me303");
-
-    expect(result.programSupport?.status).toBe("supported");
-    expect(me303?.satisfied).toBe(true);
-    expect(me303?.matchedCourse?.code).toBe("ME.20005");
-    expect(me303?.acceptedCourseCodes).toEqual(expect.arrayContaining(["ME303", "ME.20005", "ME20005"]));
-  });
-
-  it("surfaces transcript-time manual-review warnings for CS URP/IS500 elective cases", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        department: "융합인재학부",
-        courseCode: CourseCode.from("URP495", "URP.49500"),
-        category: CreditCategory.from("전선"),
-        nameKo: "학부연구프로그램",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "CS", admissionYear: 2021, track: "심화전공" }),
+describe("RequirementAnalyzer department rules", () => {
+  it("T1 AE 2022 심화전공 fulfills curated subset rule", () => {
+    const result = analyze(
+      { department: "AE", admissionYear: 2022, track: "심화전공" },
+      [
+        ...aeRequired(),
+        createRecord({ courseCode: CourseCode.from("AE321", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE331", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE401", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE405", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE409", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE410", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE230", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE490", ""), category: CreditCategory.from("연구") }),
+      ],
     );
 
-    expect(result.warnings.some((warning) => warning.type === "PROGRAM_MANUAL_REVIEW")).toBe(true);
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(true);
   });
 
-  it("reports both course-count and credit progress for CS capstone buckets", () => {
-    const transcript = Transcript.from([
-      createRecord({
-        courseCode: CourseCode.from("CS408", "CS.40008"),
-        category: CreditCategory.from("연구"),
-        nameKo: "캡스톤 팀 프로젝트",
-      }),
-    ]);
-
-    const result = RequirementAnalyzer.analyze(
-      transcript,
-      buildPlannerRequirementSet({ department: "CS", admissionYear: 2022, track: "심화전공" }),
+  it("T2 AE 2022 심화전공 fails when only 12 curated credits count", () => {
+    const result = analyze(
+      { department: "AE", admissionYear: 2022, track: "심화전공" },
+      [
+        ...aeRequired(),
+        createRecord({ courseCode: CourseCode.from("AE321", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE331", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE401", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE230", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE311", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE370", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("COE491", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE490", ""), category: CreditCategory.from("연구") }),
+      ],
     );
-    const capstone = result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "capstone-team-project");
 
-    expect(capstone).toMatchObject({
-      fulfilled: true,
-      matchedCourseCount: 1,
-      requiredCourseCount: 1,
-      earnedCredits: 3,
-    });
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(false);
   });
 
-  it("keeps manual-review warnings for bucket-level manual-review-only courses", () => {
-    const requirements = applyTrackModification(getRequirements(2022), "심화전공");
-    const transcript = Transcript.from([
-      createRecord({ courseCode: CourseCode.from("AE500", "AE.50000"), category: CreditCategory.from("전선") }),
-    ]);
+  it("T3 CS 2021 심화전공 fulfills non-2-unit subset rule", () => {
+    const result = analyze(
+      { department: "CS", admissionYear: 2021, track: "심화전공" },
+      [
+        ...csRequired(),
+        createRecord({ courseCode: CourseCode.from("CS350", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS360", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS374", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS423", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS442", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS453", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS454", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS457", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS459", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS473", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
 
-    const result = RequirementAnalyzer.analyze(transcript, {
-      ...requirements,
-      programSupport: {
-        selection: { department: "AE", admissionYear: 2022, track: "심화전공" },
-        status: "supported",
-        title: "항공우주공학과 (AE) 심화전공 지원",
-        message: "테스트",
-        knownLimitations: [],
-        datasetVersion: "test",
-        lastGeneratedAt: "2026-03-09T00:00:00.000Z",
-        sourceRefs: [],
-      },
-      departmentRequirement: {
-        department: "AE",
-        admissionYearRange: [2022, 2022],
-        programType: "심화전공",
-        displayName: "항공우주공학과 심화전공",
-        supportStatus: "supported",
-        requiredCourseSlots: [],
-        creditBuckets: [
-          {
-            id: "manual-review-bucket",
-            label: "수동 검토 버킷",
-            requiredCredits: 3,
-            eligiblePrefixes: ["AE"],
-            minimumLevel: 0,
-            allowedCategories: ["전공선택"],
-            eligibleCourseCodes: [],
-            excludedCourseCodes: [],
-            manualReviewOnlyCourseCodes: ["AE500"],
-            sourceRefs: [],
-          },
-        ],
-        equivalencies: [],
-        knownLimitations: [],
-        sourceRefs: [],
-      },
-    });
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(true);
+  });
 
-    expect(result.warnings.some((warning) => warning.type === "PROGRAM_MANUAL_REVIEW")).toBe(true);
+  it("T4 CS 2021 warns when capstone is missing", () => {
+    const result = analyze(
+      { department: "CS", admissionYear: 2021, track: "심화전공" },
+      [
+        ...csRequired(),
+        createRecord({ courseCode: CourseCode.from("CS460", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS461", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS462", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS463", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS464", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS465", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS466", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS467", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS468", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS469", ""), category: CreditCategory.from("전선"), credits: 3 }),
+        createRecord({ courseCode: CourseCode.from("CS490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "capstone-team-project")?.fulfilled).toBe(false);
+    expect(result.warnings.some((warning) => warning.message.includes("캡스톤 팀 프로젝트"))).toBe(true);
+  });
+
+  it("T5 ME 2020 심화전공 fulfills additional-credit model with 9/9 basis", () => {
+    const result = analyze(
+      { department: "ME", admissionYear: 2020, track: "심화전공" },
+      [
+        ...meRequired2020(),
+        ...["ME231", "ME251", "ME361", "ME211", "ME311", "ME221", "ME207", "ME370", "ME351"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        ...["ME410", "ME411", "ME412", "ME413", "ME414", "ME415", "ME416", "ME417"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        createRecord({ courseCode: CourseCode.from("ME490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(true);
+  });
+
+  it("T6 ME 2020 심화전공 fails with only 12 additional elective credits", () => {
+    const result = analyze(
+      { department: "ME", admissionYear: 2020, track: "심화전공" },
+      [
+        ...meRequired2020(),
+        ...["ME231", "ME251", "ME361", "ME211", "ME311", "ME221", "ME207", "ME370", "ME351"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        ...["ME410", "ME411", "ME412"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        createRecord({ courseCode: CourseCode.from("ME490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(false);
+  });
+
+  it("T7 ME 2020 심화전공 fails when basis courses are only 7/9", () => {
+    const result = analyze(
+      { department: "ME", admissionYear: 2020, track: "심화전공" },
+      [
+        ...meRequired2020(),
+        ...["ME231", "ME251", "ME361", "ME211", "ME311", "ME221", "ME207"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        ...["ME410", "ME411", "ME412", "ME413", "ME414", "ME415", "ME416", "ME417", "ME418", "ME419"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        createRecord({ courseCode: CourseCode.from("ME490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(false);
+  });
+
+  it("T8 EE 2020 심화전공 fulfills additional-credit model", () => {
+    const result = analyze(
+      { department: "EE", admissionYear: 2020, track: "심화전공" },
+      [
+        createRecord({ courseCode: CourseCode.from("EE305", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("EE405", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("EE201", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("EE202", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("EE204", ""), category: CreditCategory.from("전필") }),
+        ...["EE321", "EE322", "EE323", "EE324", "EE325", "EE326", "EE327", "EE328", "EE329", "EE330", "EE331", "EE332", "EE333", "EE334", "EE335"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        createRecord({ courseCode: CourseCode.from("EE336", ""), category: CreditCategory.from("전선"), credits: 2 }),
+        createRecord({ courseCode: CourseCode.from("EE490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(true);
+  });
+
+  it("T9 복수전공 primary ME 2022 removes research requirement", () => {
+    const result = analyze(
+      { department: "ME", secondaryDepartment: "AE", admissionYear: 2022, track: "복수전공" },
+      [],
+    );
+
+    expect(result.categories.find((category) => category.category === "연구")?.creditsRequired).toBe(0);
+    expect(result.programAnalysis?.creditBuckets.some((bucket) => bucket.id === "research")).toBe(false);
+  });
+
+  it("T10 부전공 primary AE 2022 keeps research requirement", () => {
+    const result = analyze(
+      { department: "AE", secondaryDepartment: "ME", admissionYear: 2022, track: "부전공" },
+      [],
+    );
+
+    expect(result.categories.find((category) => category.category === "연구")?.creditsRequired).toBe(3);
+    expect(result.programAnalysis?.creditBuckets.some((bucket) => bucket.id === "research")).toBe(true);
+  });
+
+  it("counts AE substitution courses toward major-total", () => {
+    const result = analyze(
+      { department: "AE", admissionYear: 2022, track: "심화전공" },
+      [
+        ...aeRequired(),
+        createRecord({ courseCode: CourseCode.from("ME231", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("ME311", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("ME301", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("COE491", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE321", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE331", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE401", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("AE490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "major-total")?.fulfilled).toBe(true);
+  });
+
+  it("does not count non-CS electives toward CS subset rule", () => {
+    const result = analyze(
+      { department: "CS", admissionYear: 2021, track: "심화전공" },
+      [
+        ...csRequired(),
+        ...Array.from({ length: 10 }, (_, index) =>
+          createRecord({ courseCode: CourseCode.from(`EE4${10 + index}`, ""), category: CreditCategory.from("전선"), credits: 3 }),
+        ),
+        createRecord({ courseCode: CourseCode.from("CS490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(false);
+  });
+
+  it("counts only ME 전공선택 courses for basis requirements", () => {
+    const result = analyze(
+      { department: "ME", admissionYear: 2020, track: "심화전공" },
+      [
+        ...meRequired2020(),
+        createRecord({ courseCode: CourseCode.from("ME231", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("ME251", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("ME361", ""), category: CreditCategory.from("전필") }),
+        createRecord({ courseCode: CourseCode.from("ME211", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("ME311", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("ME221", ""), category: CreditCategory.from("전선") }),
+        createRecord({ courseCode: CourseCode.from("ME207", ""), category: CreditCategory.from("전선") }),
+        ...["ME410", "ME411", "ME412", "ME413", "ME414", "ME415", "ME416", "ME417", "ME418", "ME419", "ME420", "ME421", "ME422"].map((code) =>
+          createRecord({ courseCode: CourseCode.from(code, ""), category: CreditCategory.from("전선") }),
+        ),
+        createRecord({ courseCode: CourseCode.from("ME490", ""), category: CreditCategory.from("연구") }),
+      ],
+    );
+
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "basis-minimum")?.matchedCourseCount).toBe(4);
+    expect(result.programAnalysis?.creditBuckets.find((bucket) => bucket.id === "advanced-major")?.fulfilled).toBe(false);
   });
 });

@@ -26,7 +26,11 @@ export function TrackSelector({ value, onChange }: TrackSelectorProps) {
             </option>
           ))}
         </select>
-      <p className="text-xs text-text-muted">복수전공은 인선(12학점)·연구(면제) 완화가 반영됩니다. 자유융합전공은 2개 이상 학과에서 12학점 이상 전공과목 이수가 필요합니다.</p>
+      <p className="text-xs text-text-muted">
+        학과별 전공 구조와 심화전공 조건은 선택한 학과와 입학년도에 따라 달라집니다.
+        복수전공은 인선·기초선택·연구 요건이 완화되고, 자유융합전공은 2개 이상 학사조직의
+        전공과목 이수를 함께 확인합니다.
+      </p>
     </div>
   );
 }

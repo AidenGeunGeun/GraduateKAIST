@@ -24,7 +24,7 @@ export type Gyeyol = "인문" | "사회" | "예술";
 
 export type TrackType = "심화전공" | "부전공" | "복수전공" | "자유융합전공";
 
-export type SupportedProgramType = Extract<TrackType, "심화전공" | "부전공" | "복수전공">;
+export type SupportedProgramType = TrackType | "주전공";
 
 export type SupportedDepartment = "AE" | "ME" | "CS" | "EE";
 
@@ -61,53 +61,52 @@ export interface TrackModification {
 
 export interface PlannerSelection {
   department: DepartmentSelection;
+  secondaryDepartment?: DepartmentSelection;
   admissionYear: number;
   track: TrackType;
 }
 
 export interface CourseCatalogEntry {
-  canonicalCode: string;
-  aliases: string[];
-  nameKo: string;
-  nameEn: string;
-  offeringDepartments: string[];
-  observedYears: number[];
-  observedSemesters: Season[];
-  rawCategoryLabels: string[];
-  level: number;
-  crossListings: string[];
-  sourceRefs: string[];
+  oldCode: string | null;
+  newCode: string | null;
+  titleKo: string;
+  credits: number | null;
+  deptNameKo: string | null;
+  courseTypeCode: string | null;
+  courseTypeName?: string | null;
 }
 
-export interface ProgramRequiredCourseSlot {
+export interface ProgramRequiredCourseGroup {
   id: string;
   label: string;
-  canonicalCode: string;
   acceptedCourseCodes: string[];
-  sourceRefs: string[];
+  requiredCount: number;
+  notes?: string;
 }
 
-export interface ProgramCreditBucketRule {
+export interface ProgramCreditRule {
   id: string;
   label: string;
-  requiredCredits: number;
+  requiredCredits?: number;
   requiredCourseCount?: number;
-  eligiblePrefixes: string[];
-  minimumLevel: number;
-  allowedCategories: Array<"전공필수" | "전공선택">;
-  eligibleCourseCodes: string[];
-  excludedCourseCodes: string[];
-  manualReviewOnlyCourseCodes: string[];
-  manualReviewOnlyReason?: string;
-  sourceRefs: string[];
+  eligiblePrefixes?: string[];
+  eligibleCourseCodes?: string[];
+  allowedCategories: Array<"전공필수" | "전공선택" | "연구">;
+  minimumCourseCredits?: number;
+  notes?: string;
 }
 
-export interface ProgramEquivalency {
-  slotId: string;
-  canonicalCode: string;
-  equivalentCodes: string[];
+export interface AdvancedMajorRule {
+  type: "subset_of_전선" | "additional";
+  requiredCredits: number;
+  eligibleCourseCodes?: string[];
+  minimumCourseCredits?: number;
   note: string;
-  sourceRefs: string[];
+  basisCourseRequirement?: {
+    required: number;
+    total: number;
+    courseCodes: string[];
+  };
 }
 
 export interface DepartmentProgramRequirement {
@@ -116,9 +115,10 @@ export interface DepartmentProgramRequirement {
   programType: SupportedProgramType;
   displayName: string;
   supportStatus: Extract<ProgramSupportStatus, "supported" | "partial">;
-  requiredCourseSlots: ProgramRequiredCourseSlot[];
-  creditBuckets: ProgramCreditBucketRule[];
-  equivalencies: ProgramEquivalency[];
+  totalCredits?: number;
+  requiredCourses: ProgramRequiredCourseGroup[];
+  creditRules: ProgramCreditRule[];
+  advancedMajor?: AdvancedMajorRule;
   knownLimitations: string[];
   sourceRefs: string[];
 }
@@ -154,6 +154,8 @@ export interface RequirementSet {
   selectedProgram?: PlannerSelection;
   programSupport?: ProgramSupportInfo;
   departmentRequirement?: DepartmentProgramRequirement | null;
+  secondaryProgramSupport?: ProgramSupportInfo;
+  secondaryDepartmentRequirement?: DepartmentProgramRequirement | null;
 }
 
 export interface CourseInfo {
@@ -176,7 +178,9 @@ export interface ProgramRequiredCourseResult {
   label: string;
   satisfied: boolean;
   acceptedCourseCodes: string[];
-  matchedCourse?: CourseInfo;
+  matchedCourses: CourseInfo[];
+  matchedCount: number;
+  requiredCount: number;
   detail: string;
 }
 
@@ -236,6 +240,8 @@ export interface AnalysisResult {
   overallStatus: "fulfilled" | "in_progress" | "behind";
   programSupport?: ProgramSupportInfo;
   programAnalysis?: ProgramAnalysisResult | null;
+  secondaryProgramSupport?: ProgramSupportInfo;
+  secondaryProgramAnalysis?: ProgramAnalysisResult | null;
 }
 
 export interface HssResult {

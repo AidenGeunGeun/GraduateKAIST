@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "collectedAt": "2026-03-10",
+  "entries": [
+    {
+      "id": "ae-official-requirements",
+      "department": "AE",
+      "type": "official-webpage",
+      "url": "https://ae.kaist.ac.kr/",
+      "title": "항공우주공학과 공식 이수요건",
+      "notes": "학과 홈페이지 공식 배포 교과목이수요건 문서를 기준으로 AE 2016-2025 규칙을 수기 반영했다. AE 심화전공 curated list와 주/부/복수전공 구조는 이 문서를 기준으로 작성했다."
+    },
+    {
+      "id": "cs-official-requirements",
+      "department": "CS",
+      "type": "official-webpage",
+      "url": "https://cs.kaist.ac.kr/education/undergraduate",
+      "title": "전산학부 공식 이수요건 페이지",
+      "notes": "CS 2016-2025 전필, capstone, 심화전공 제약, 부전공/복수전공 수치의 기준 출처다."
+    },
+    {
+      "id": "me-official-requirements",
+      "department": "ME",
+      "type": "official-webpage",
+      "url": "https://me.kaist.ac.kr/",
+      "title": "기계공학과 공식 이수요건 페이지",
+      "notes": "ME 2016-2025 전필 연도 경계, 기반과목 9개, 심화전공 추가학점 규칙의 기준 출처다."
+    },
+    {
+      "id": "ee-official-requirements",
+      "department": "EE",
+      "type": "official-webpage",
+      "url": "https://ee.kaist.ac.kr/under-req/",
+      "title": "전기및전자공학부 공식 학부 이수요건",
+      "notes": "EE 2016-2025 전필 구조와 심화전공 추가학점 규칙의 기준 출처다."
+    },
+    {
+      "id": "cais-course-db-lookup",
+      "department": "ALL",
+      "type": "official-system-metadata",
+      "url": "https://cais.kaist.ac.kr/totalOpeningCourse",
+      "title": "CAIS 전체개설과목 조회",
+      "notes": "직접 CAIS POST는 이 환경에서 타임아웃되어 공식 ERP 개설교과목 공개 페이지 fallback으로 2019-2026 개설 데이터를 수집했고, courses.db와 SCRAPE-MANIFEST.json에 그 결과를 기록했다. ME 기반과목/전필 및 AE 심화전공 신코드 lookup은 이 SQLite DB를 기준으로 채웠다.",
+      "checkedArtifacts": [
+        "references/kaist-data/SCRAPE-MANIFEST.json",
+        "references/kaist-data/requirements/ae.requirements.json",
+        "references/kaist-data/requirements/me.requirements.json"
+      ]
+    }
+  ]
+}

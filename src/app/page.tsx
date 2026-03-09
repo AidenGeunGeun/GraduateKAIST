@@ -26,6 +26,7 @@ import { TrackSelector } from "@/app/components/upload/TrackSelector";
 import {
   buildPlannerRequirementSet,
   getDepartmentLabel,
+  getDepartmentShortLabel,
   getProgramSupport,
   getSupportedDepartments,
 } from "@/domain/configs/planner";
@@ -41,11 +42,19 @@ import type {
   DepartmentSelection,
   HssResult,
   ParseWarning,
+  ProgramSupportStatus,
   TrackType,
 } from "@/domain/types";
 
+type DepartmentOption = {
+  value: DepartmentSelection;
+  label: string;
+  supported: boolean;
+};
+
 interface DashboardState {
   department: DepartmentSelection;
+  secondaryDepartment: DepartmentSelection | null;
   track: TrackType;
   admissionYear: number;
   analysisResult: AnalysisResult;
@@ -70,9 +79,26 @@ function sectionStyle(delay: number): CSSProperties {
   return { "--delay": `${delay}ms` } as CSSProperties;
 }
 
+function badgeVariant(status: ProgramSupportStatus): "supported" | "partial" | "neutral" | "danger" {
+  if (status === "supported") {
+    return "supported";
+  }
+
+  if (status === "partial") {
+    return "partial";
+  }
+
+  if (status === "common-only") {
+    return "neutral";
+  }
+
+  return "danger";
+}
+
 export default function Home() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedDepartment, setSelectedDepartment] = useState<DepartmentSelection | null>(null);
+  const [secondaryDepartment, setSecondaryDepartment] = useState<DepartmentSelection | null>(null);
   const [selectedTrack, setSelectedTrack] = useState<TrackType>("심화전공");
   const [admissionYear, setAdmissionYear] = useState<number | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
@@ -80,15 +106,56 @@ export default function Home() {
   const [dashboard, setDashboard] = useState<DashboardState | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const canAnalyze = selectedFile !== null && admissionYear !== null && selectedDepartment !== null && !loading;
-  const supportPreview =
+  const isDualTrack = selectedTrack === "복수전공" || selectedTrack === "부전공";
+  const hasValidSecondaryDepartment =
+    !isDualTrack || (secondaryDepartment !== null && secondaryDepartment !== selectedDepartment);
+  const canAnalyze =
+    selectedFile !== null && admissionYear !== null && selectedDepartment !== null && hasValidSecondaryDepartment && !loading;
+  const primarySupportPreview =
     selectedDepartment !== null && admissionYear !== null
-      ? getProgramSupport({ department: selectedDepartment, admissionYear, track: selectedTrack })
+      ? getProgramSupport(
+          {
+            department: selectedDepartment,
+            secondaryDepartment: secondaryDepartment ?? undefined,
+            admissionYear,
+            track: selectedTrack,
+          },
+          isDualTrack
+            ? {
+                queryTrack: "심화전공",
+                displayTrack: "주전공",
+              }
+            : undefined,
+        )
       : null;
-  const departmentOptions = getSupportedDepartments();
+  const secondarySupportPreview =
+    isDualTrack && selectedDepartment !== null && secondaryDepartment !== null && admissionYear !== null
+      ? getProgramSupport(
+          {
+            department: selectedDepartment,
+            secondaryDepartment,
+            admissionYear,
+            track: selectedTrack,
+          },
+          {
+            department: secondaryDepartment,
+            queryTrack: selectedTrack,
+            displayTrack: selectedTrack,
+          },
+        )
+      : null;
+  const departmentOptions: DepartmentOption[] = [
+    ...getSupportedDepartments().map((department) => ({
+      value: department as DepartmentSelection,
+      label: getDepartmentLabel(department as DepartmentSelection),
+      supported: true,
+    })),
+    { value: "OTHER", label: getDepartmentLabel("OTHER"), supported: false },
+  ];
+  const secondaryDepartmentOptions = departmentOptions.filter((option) => option.value !== selectedDepartment);
 
   const handleAnalyze = async () => {
-    if (!selectedFile || !admissionYear || !selectedDepartment) {
+    if (!selectedFile || !admissionYear || !selectedDepartment || (isDualTrack && !secondaryDepartment)) {
       return;
     }
 
@@ -96,6 +163,7 @@ export default function Home() {
     setAnalyzeError(null);
     analyticsTrack("analysis_started", {
       department: selectedDepartment,
+      secondaryDepartment: secondaryDepartment ?? undefined,
       track: selectedTrack,
       admissionYear,
     });
@@ -119,9 +187,15 @@ export default function Home() {
       const transcript = Transcript.from(parseResult.records);
       const requirementSet = buildPlannerRequirementSet({
         department: selectedDepartment,
+        secondaryDepartment: secondaryDepartment ?? undefined,
         admissionYear,
         track: selectedTrack,
       });
+      if (requirementSet === null) {
+        setAnalyzeError("전공 분석 데이터를 재구축 중입니다. 잠시 후 다시 시도해주세요.");
+        setDashboard(null);
+        return;
+      }
       const analysisResult = RequirementAnalyzer.analyze(transcript, requirementSet);
       const cumulativeGpa = GpaCalculator.calculateCumulative(transcript);
       const semesterTrend = [...GpaCalculator.calculateBySemester(transcript).entries()]
@@ -139,18 +213,32 @@ export default function Home() {
       const hssResult = HssDistributionChecker.check(hssRecords, requirementSet.isDualMajor);
       const currentGpaCredits = transcript.gpaRecords().reduce((sum, record) => sum + record.credits, 0);
 
-      const informationalNotices =
-        analysisResult.programSupport?.status === "supported"
-          ? [
-              "학사요람 기준 분석 결과입니다. 최종 졸업 판정은 학과 또는 학사팀에 확인하세요.",
-              ...analysisResult.programSupport.knownLimitations,
-              "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
-            ]
-          : [
-              analysisResult.programSupport?.message ??
-                "공통 졸업요건만 분석합니다. 학과별 전공 요건은 학과에 직접 확인하세요.",
-              "윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.",
-            ];
+      const programSupports = [analysisResult.programSupport, analysisResult.secondaryProgramSupport].filter(
+        (support): support is NonNullable<typeof analysisResult.programSupport> => support !== undefined,
+      );
+      const informationalNotices: string[] = [];
+      const pushNotice = (notice: string) => {
+        if (!informationalNotices.includes(notice)) {
+          informationalNotices.push(notice);
+        }
+      };
+
+      if (programSupports.some((support) => support.status === "supported")) {
+        pushNotice("학사요람 기준 분석 결과입니다. 최종 졸업 판정은 학과 또는 학사팀에 확인하세요.");
+      }
+
+      if (programSupports.length === 0) {
+        pushNotice("공통 졸업요건만 분석합니다. 학과별 전공 요건은 학과에 직접 확인하세요.");
+      }
+
+      for (const support of programSupports) {
+        pushNotice(`${support.title}: ${support.message}`);
+        for (const limitation of support.knownLimitations) {
+          pushNotice(limitation);
+        }
+      }
+
+      pushNotice("윤리및안전, 영어능력 졸업요건은 별도 시스템에서 확인하세요.");
 
       if (requirementSet.hasHssCoreTypeRequirement) {
         informationalNotices.push("인선 핵심/융합/일반 유형 구분은 성적표에 나오지 않아 자동 확인이 안 됩니다.");
@@ -164,6 +252,7 @@ export default function Home() {
 
       setDashboard({
         department: selectedDepartment,
+        secondaryDepartment,
         track: selectedTrack,
         admissionYear,
         analysisResult,
@@ -199,13 +288,24 @@ export default function Home() {
 
   const handleTrackChange = (nextTrack: TrackType) => {
     setSelectedTrack(nextTrack);
+    if (nextTrack !== "복수전공" && nextTrack !== "부전공") {
+      setSecondaryDepartment(null);
+    }
     analyticsTrack("track_selected", { track: nextTrack });
+  };
+
+  const handleDepartmentChange = (nextDepartment: DepartmentSelection | null) => {
+    setSelectedDepartment(nextDepartment);
+    if (nextDepartment === null || secondaryDepartment === nextDepartment) {
+      setSecondaryDepartment(null);
+    }
   };
 
   const resetToUpload = () => {
     setDashboard(null);
     setSelectedFile(null);
     setSelectedDepartment(null);
+    setSecondaryDepartment(null);
     setSelectedTrack("심화전공");
     setAdmissionYear(null);
     setFileError(null);
@@ -230,23 +330,19 @@ export default function Home() {
 
               <div className="rounded-lg border border-accent/30 bg-accent/10 px-3 py-2 text-xs text-accent">
                 <div className="flex flex-wrap items-center gap-2">
-                  <Badge
-                    variant={
-                      supportPreview === null
-                        ? "neutral"
-                        : supportPreview.status === "supported"
-                          ? "supported"
-                          : supportPreview.status === "partial"
-                            ? "partial"
-                            : supportPreview.status === "common-only"
-                              ? "neutral"
-                              : "danger"
-                    }
-                  >
-                    {supportPreview?.title ?? "지원 범위"}
+                  <Badge variant={primarySupportPreview ? badgeVariant(primarySupportPreview.status) : "neutral"}>
+                    {primarySupportPreview?.title ?? "지원 범위"}
                   </Badge>
+                  {secondarySupportPreview ? (
+                    <Badge variant={badgeVariant(secondarySupportPreview.status)}>{secondarySupportPreview.title}</Badge>
+                  ) : null}
                   <span className="text-text">
-                    {supportPreview?.message ?? "AE, ME, CS, EE 학과의 전공 분석을 지원합니다. 기타 학과는 공통 요건만 확인합니다."}
+                    {[
+                      primarySupportPreview?.message,
+                      secondarySupportPreview?.message,
+                    ]
+                      .filter(Boolean)
+                      .join(" ") || "AE, ME, CS, EE 학과의 전공 분석을 지원합니다. 기타 학과는 공통 요건만 확인합니다."}
                   </span>
                 </div>
               </div>
@@ -256,10 +352,23 @@ export default function Home() {
               <DepartmentSelector
                 value={selectedDepartment}
                 options={departmentOptions}
-                onChange={setSelectedDepartment}
+                onChange={handleDepartmentChange}
               />
 
               <TrackSelector value={selectedTrack} onChange={handleTrackChange} />
+
+              {isDualTrack ? (
+                <DepartmentSelector
+                  id="secondary-department"
+                  label={selectedTrack === "복수전공" ? "복수전공 학과" : "부전공 학과"}
+                  placeholder={selectedDepartment ? "학과를 선택하세요" : "먼저 주전공 학과를 선택하세요"}
+                  description="주전공과 다른 학과를 선택하면 두 학과 기준으로 함께 분석합니다."
+                  disabled={selectedDepartment === null}
+                  value={secondaryDepartment}
+                  options={secondaryDepartmentOptions}
+                  onChange={setSecondaryDepartment}
+                />
+              ) : null}
 
               <AdmissionYearSelector
                 years={ADMISSION_YEARS}
@@ -302,6 +411,9 @@ export default function Home() {
     dashboard.analysisResult.totalCreditsRequired - dashboard.analysisResult.totalCreditsEarned,
     0,
   );
+  const dashboardProgramTitle = dashboard.secondaryDepartment
+    ? `${getDepartmentShortLabel(dashboard.department)} 전공 (주전공) · ${getDepartmentShortLabel(dashboard.secondaryDepartment)} ${dashboard.track}`
+    : `${getDepartmentLabel(dashboard.department)} · ${dashboard.track}`;
 
   return (
     <AppErrorBoundary onReset={resetToUpload}>
@@ -316,9 +428,7 @@ export default function Home() {
               ← 다시 분석하기
             </button>
             <div className="flex items-center gap-2 text-xs text-text-muted">
-              <span>{getDepartmentLabel(dashboard.department)}</span>
-              <span>·</span>
-              <span>{dashboard.track}</span>
+              <span>{dashboardProgramTitle}</span>
               <span>·</span>
               <span>{dashboard.admissionYear}학번 기준</span>
               <ThemeToggle />
@@ -395,6 +505,13 @@ export default function Home() {
                 <ProgramRequirementSection
                   support={dashboard.analysisResult.programSupport}
                   analysis={dashboard.analysisResult.programAnalysis}
+                />
+              </div>
+
+              <div className="section-stagger" style={sectionStyle(125)}>
+                <ProgramRequirementSection
+                  support={dashboard.analysisResult.secondaryProgramSupport}
+                  analysis={dashboard.analysisResult.secondaryProgramAnalysis}
                 />
               </div>
 

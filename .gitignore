@@ -45,3 +45,7 @@ next-env.d.ts
 
 # stray test files
 ae-test.pdf
+
+# generated KAIST data
+references/kaist-data/courses.db
+references/kaist-data/cais-raw/

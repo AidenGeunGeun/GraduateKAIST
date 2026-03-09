@@ -1,0 +1,40 @@
+{
+  "scraped_at": "2026-03-10",
+  "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "terms": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "total_rows": 78926,
+  "source": "https://cais.kaist.ac.kr/totalOpeningCourse",
+  "actualSource": "https://erp.kaist.ac.kr/com/lgin/SsoCtr/initExtPageWork.do?link=estblSubjt",
+  "skippedQueries": [
+    {
+      "year": 2026,
+      "term": 2,
+      "reason": "future term not yet published"
+    },
+    {
+      "year": 2026,
+      "term": 3,
+      "reason": "future term not yet published"
+    },
+    {
+      "year": 2026,
+      "term": 4,
+      "reason": "future term not yet published"
+    }
+  ],
+  "note": "Direct CAIS POST timed out from the local environment; used the official ERP offered-course page via browser automation."
+}
