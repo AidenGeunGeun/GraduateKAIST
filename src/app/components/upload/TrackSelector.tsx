@@ -22,11 +22,11 @@ export function TrackSelector({ value, onChange }: TrackSelectorProps) {
           {TRACK_OPTIONS.map((track) => (
             <option key={track} value={track}>
               {track}
-              {track === "자유융합전공" ? " (공통 분석만)" : ""}
+              {track === "자유융합전공" ? " (2+ 학사조직 12학점)" : ""}
             </option>
           ))}
         </select>
-      <p className="text-xs text-text-muted">복수전공은 인선(12학점)·연구(면제) 완화가 반영됩니다. 자유융합전공은 전공학점 산정 방식이 달라 공통 요건만 분석합니다.</p>
+      <p className="text-xs text-text-muted">복수전공은 인선(12학점)·연구(면제) 완화가 반영됩니다. 자유융합전공은 2개 이상 학과에서 12학점 이상 전공과목 이수가 필요합니다.</p>
     </div>
   );
 }

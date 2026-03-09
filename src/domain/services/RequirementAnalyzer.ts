@@ -269,11 +269,39 @@ export class RequirementAnalyzer {
         missingCourses: [],
         details: `${programResult.analysis.displayName} 기준`,
       });
+    } else if (requirementSet.selectedProgram?.track === "자유융합전공") {
+      const majorRecords = earnedRecords.filter(
+        (record) => record.category.value === "전공필수" || record.category.value === "전공선택",
+      );
+      const majorTotalCredits = sumCredits(majorRecords);
+      const distinctDepts = new Set(majorRecords.map((record) => record.courseCode.departmentPrefix));
+      const deptCount = distinctDepts.size;
+      const fulfilled = majorTotalCredits >= 12 && deptCount >= 2;
+
+      categories.push({
+        category: "전공합계",
+        creditsEarned: majorTotalCredits,
+        creditsRequired: 12,
+        fulfilled,
+        missingCourses: [],
+        details: fulfilled
+          ? `${deptCount}개 학과 · 요건 충족`
+          : deptCount < 2
+            ? `${deptCount}개 학과 — 2개 이상 학사조직 필요`
+            : `${12 - majorTotalCredits}학점 부족`,
+      });
+
+      if (deptCount < 2) {
+        warnings.push({
+          type: "FREE_CONVERGENCE_DEPT_COUNT",
+          message: `자유융합전공은 2개 이상 학사조직의 전공과목이 필요합니다. 현재 ${deptCount}개 학과(${[...distinctDepts].join(", ") || "없음"})만 확인됩니다.`,
+        });
+      }
     } else {
       if (requirementSet.programSupport?.status === "partial") {
         warnings.push({
           type: "PROGRAM_PARTIAL_SUPPORT",
-          message: `${requirementSet.programSupport.title}: 일부 규칙만 정규화되어 있어 공통 분석으로 안내합니다.`,
+          message: `${requirementSet.programSupport.title}: 일부 규칙만 확인 가능하여 공통 분석으로 안내합니다.`,
         });
       }
 

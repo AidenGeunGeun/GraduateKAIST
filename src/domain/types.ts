@@ -206,7 +206,8 @@ export interface ProgramAnalysisResult {
 export type WarningType =
   | "HSS_DISTRIBUTION_INCOMPLETE"
   | "PROGRAM_MANUAL_REVIEW"
-  | "PROGRAM_PARTIAL_SUPPORT";
+  | "PROGRAM_PARTIAL_SUPPORT"
+  | "FREE_CONVERGENCE_DEPT_COUNT";
 
 export interface Warning {
   type: WarningType;

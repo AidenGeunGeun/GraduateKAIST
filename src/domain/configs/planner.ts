@@ -112,8 +112,8 @@ export function getProgramSupport(selection: PlannerSelection): ProgramSupportIn
     return {
       selection,
       status: "common-only",
-      title: `${getDepartmentLabel(selection.department)} ${selection.track} 공통 분석`,
-      message: "자유융합전공은 2개 이상 학사조직에서 12학점 이상을 이수해야 하며, 이 조건은 성적표만으로 자동 확인이 어려워 공통 요건만 분석합니다.",
+      title: `${getDepartmentLabel(selection.department)} ${selection.track}`,
+      message: "자유융합전공은 2개 이상 학사조직에서 12학점 이상 전공과목을 이수해야 합니다. 공통 요건과 전공학점/학과 분포를 함께 확인합니다.",
       knownLimitations: [],
       datasetVersion: supportManifestData.datasetVersion,
       lastGeneratedAt: supportManifestData.generatedAt,
