@@ -1,4 +1,5 @@
 {
+  "$schema": "./schema.json",
   "department": "EE",
   "departmentNameKo": "전기및전자공학부",
   "source": "ee.kaist.ac.kr/under-req/ 공식 페이지",

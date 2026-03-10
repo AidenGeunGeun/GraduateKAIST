@@ -1,0 +1,9 @@
+{
+  "$schema": "./schema.json",
+  "departments": [
+    { "code": "AE", "labelKo": "항공우주공학과", "labelShort": "AE" },
+    { "code": "ME", "labelKo": "기계공학과", "labelShort": "ME" },
+    { "code": "CS", "labelKo": "전산학부", "labelShort": "CS" },
+    { "code": "EE", "labelKo": "전기및전자공학부", "labelShort": "EE" }
+  ]
+}

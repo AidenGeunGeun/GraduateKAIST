@@ -5,7 +5,7 @@ import { CreditCategory } from "@/domain/models/CreditCategory";
 import { Grade } from "@/domain/models/Grade";
 import { Semester } from "@/domain/models/Semester";
 
-export interface CourseRecordProps {
+interface CourseRecordProps {
   semester: Semester;
   department: string;
   courseCode: CourseCode;

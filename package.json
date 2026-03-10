@@ -10,7 +10,8 @@
     "test": "vitest",
     "test:run": "vitest run",
     "db:scrape": "node scripts/scrape-cais.mjs",
-    "db:generate": "node scripts/generate-course-catalog.mjs"
+    "db:generate": "node scripts/generate-course-catalog.mjs && node scripts/generate-departments.mjs",
+    "generate:depts": "node scripts/generate-departments.mjs"
   },
   "dependencies": {
     "@fontsource/pretendard": "^5.2.5",

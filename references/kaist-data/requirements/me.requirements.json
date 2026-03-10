@@ -1,4 +1,5 @@
 {
+  "$schema": "./schema.json",
   "department": "ME",
   "departmentNameKo": "기계공학과",
   "source": "me.kaist.ac.kr 이수요건 페이지 + CAIS 2019-2026 SQLite lookup",

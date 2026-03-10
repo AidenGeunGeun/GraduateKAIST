@@ -2,6 +2,7 @@ import aeRequirements from "../../../references/kaist-data/requirements/ae.requi
 import csRequirements from "../../../references/kaist-data/requirements/cs.requirements.json";
 import eeRequirements from "../../../references/kaist-data/requirements/ee.requirements.json";
 import meRequirements from "../../../references/kaist-data/requirements/me.requirements.json";
+import { DEPARTMENT_LABELS, SUPPORTED_DEPARTMENTS } from "@/domain/generated/departments.generated";
 import type {
   AdvancedMajorRule,
   DepartmentProgramRequirement,
@@ -18,15 +19,7 @@ import type {
 
 import { applyTrackModification, getRequirements } from "@/domain/configs/requirements";
 
-const SUPPORTED_DEPARTMENTS: SupportedDepartment[] = ["AE", "ME", "CS", "EE"];
-
-const DEPARTMENT_LABELS: Record<DepartmentSelection, string> = {
-  AE: "항공우주공학과 (AE)",
-  ME: "기계공학과 (ME)",
-  CS: "전산학부 (CS)",
-  EE: "전기및전자공학부 (EE)",
-  OTHER: "기타 / 미지원 학과",
-};
+const OTHER_DEPARTMENT_LABEL = "기타 / 미지원 학과";
 
 const RAW_REQUIREMENTS = {
   AE: aeRequirements,
@@ -90,7 +83,12 @@ function getSourceRefs(department: SupportedDepartment): string[] {
 }
 
 function getDepartmentLabelInternal(department: DepartmentSelection): string {
-  return DEPARTMENT_LABELS[department];
+  if (department === "OTHER") {
+    return OTHER_DEPARTMENT_LABEL;
+  }
+
+  const labels = DEPARTMENT_LABELS[department];
+  return labels ? `${labels.labelKo} (${labels.labelShort})` : department;
 }
 
 function getYearGroup(department: SupportedDepartment, admissionYear: number): RawYearGroup | null {
@@ -382,7 +380,7 @@ export function getDepartmentLabel(department: DepartmentSelection): string {
 }
 
 export function getDepartmentShortLabel(department: DepartmentSelection): string {
-  return department === "OTHER" ? "기타" : department;
+  return department === "OTHER" ? "기타" : DEPARTMENT_LABELS[department]?.labelShort ?? department;
 }
 
 export function getSupportedDepartments(): string[] {
@@ -409,7 +407,7 @@ export function getProgramSupport(selection: PlannerSelection, options: ProgramS
   };
 }
 
-export function derivePrimaryMajorRequirement(
+function derivePrimaryMajorRequirement(
   requirement: DepartmentProgramRequirement,
   track: TrackType,
 ): DepartmentProgramRequirement {

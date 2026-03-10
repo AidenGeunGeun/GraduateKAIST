@@ -1,4 +1,5 @@
 {
+  "$schema": "./schema.json",
   "department": "CS",
   "departmentNameKo": "전산학부",
   "source": "전산학부 공식 홈페이지 이수요건 페이지",

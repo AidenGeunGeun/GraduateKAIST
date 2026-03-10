@@ -1,4 +1,5 @@
 import type { CourseRecord } from "@/domain/models/CourseRecord";
+import type { SupportedDepartment as GeneratedSupportedDepartment } from "@/domain/generated/departments.generated";
 
 export type Season = "봄" | "여름" | "가을" | "겨울";
 
@@ -26,7 +27,7 @@ export type TrackType = "심화전공" | "부전공" | "복수전공" | "자유�
 
 export type SupportedProgramType = TrackType | "주전공";
 
-export type SupportedDepartment = "AE" | "ME" | "CS" | "EE";
+export type SupportedDepartment = GeneratedSupportedDepartment;
 
 export type DepartmentSelection = SupportedDepartment | "OTHER";
 
@@ -64,16 +65,6 @@ export interface PlannerSelection {
   secondaryDepartment?: DepartmentSelection;
   admissionYear: number;
   track: TrackType;
-}
-
-export interface CourseCatalogEntry {
-  oldCode: string | null;
-  newCode: string | null;
-  titleKo: string;
-  credits: number | null;
-  deptNameKo: string | null;
-  courseTypeCode: string | null;
-  courseTypeName?: string | null;
 }
 
 export interface ProgramRequiredCourseGroup {
@@ -119,15 +110,6 @@ export interface DepartmentProgramRequirement {
   requiredCourses: ProgramRequiredCourseGroup[];
   creditRules: ProgramCreditRule[];
   advancedMajor?: AdvancedMajorRule;
-  knownLimitations: string[];
-  sourceRefs: string[];
-}
-
-export interface SupportManifestEntry {
-  department: SupportedDepartment;
-  admissionYearRange: [number, number];
-  supportedProgramTypes: SupportedProgramType[];
-  supportStatus: Extract<ProgramSupportStatus, "supported" | "partial" | "common-only">;
   knownLimitations: string[];
   sourceRefs: string[];
 }

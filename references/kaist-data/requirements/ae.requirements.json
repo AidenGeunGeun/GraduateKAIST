@@ -1,4 +1,5 @@
 {
+  "$schema": "./schema.json",
   "department": "AE",
   "departmentNameKo": "항공우주공학과",
   "source": "항공우주공학과 교과목이수요건 (학과 홈페이지 공식 배포)",

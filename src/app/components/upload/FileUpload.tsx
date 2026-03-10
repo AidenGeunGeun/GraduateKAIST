@@ -72,7 +72,7 @@ export function FileUpload({ file, error, onSelectFile }: FileUploadProps) {
   );
 }
 
-export function isValidUploadFile(file: File | null): boolean {
+function isValidUploadFile(file: File | null): boolean {
   if (!file) {
     return false;
   }

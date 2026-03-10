@@ -1,0 +1,94 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "KAIST department requirements corpus",
+  "oneOf": [
+    { "$ref": "#/definitions/registryFile" },
+    { "$ref": "#/definitions/requirementsFile" }
+  ],
+  "definitions": {
+    "registryFile": {
+      "type": "object",
+      "required": ["departments"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "departments": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["code", "labelKo", "labelShort"],
+            "properties": {
+              "code": { "type": "string", "pattern": "^[A-Z][A-Z0-9]*$" },
+              "labelKo": { "type": "string" },
+              "labelShort": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "requirementsFile": {
+      "type": "object",
+      "required": ["department", "departmentNameKo", "source", "yearGroups"],
+      "properties": {
+        "$schema": { "type": "string" },
+        "department": { "type": "string", "pattern": "^[A-Z][A-Z0-9]*$" },
+        "departmentNameKo": { "type": "string" },
+        "source": { "type": "string" },
+        "sourceRefs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "notes": {
+          "type": ["object", "string"]
+        },
+        "yearGroups": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/yearGroup" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "yearGroup": {
+      "type": "object",
+      "required": ["id", "admissionYears", "totalCredits", "tracks"],
+      "properties": {
+        "id": { "type": "string" },
+        "admissionYears": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "number" }
+        },
+        "totalCredits": { "type": "number" },
+        "notes": { "type": "string" },
+        "tracks": {
+          "oneOf": [
+            {
+              "type": "string",
+              "pattern": "^SAME_AS_.+"
+            },
+            {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": { "$ref": "#/definitions/trackConfig" }
+            }
+          ]
+        }
+      },
+      "additionalProperties": true
+    },
+    "trackConfig": {
+      "type": "object",
+      "properties": {
+        "전공": { "type": "object" },
+        "심화전공": { "type": "object" },
+        "연구": { "type": "object" },
+        "primaryMajor": { "type": "object" },
+        "secondaryMajor": { "type": "object" }
+      },
+      "additionalProperties": true
+    }
+  }
+}
