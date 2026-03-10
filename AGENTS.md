@@ -33,6 +33,57 @@ If official-source coverage is incomplete, the result MUST be `partial` or `comm
 - `common-only`: no trustworthy department-specific rule set; only common KAIST graduation logic may be shown
 - `unsupported`: no usable rule set; do not claim department analysis
 
+## Current Corpus State
+
+### Supported Departments (as of 2026-03)
+
+| Dept | Name            | Source                              | Year Groups              | 심화전공 Model |
+|------|-----------------|-------------------------------------|--------------------------|----------------|
+| AE   | 항공우주공학과  | 학과 공식 PDF                       | 2016-2022 / 2023+        | subset_of_전선 |
+| ME   | 기계공학과      | me.kaist.ac.kr 이수요건             | 2016-2021 / 2022+        | additional     |
+| CS   | 전산학부        | 학과 홈페이지                       | 2016-2019 / 2020-2022 / 2023+ | subset_of_전선 |
+| EE   | 전기및전자공학부| ee.kaist.ac.kr/under-req/           | 2016-2017 / 2018-2022 / 2023+ | additional     |
+
+Common requirements: official bulletins 2019-2025, all years use totalCredits=138, auTotal=4 (체육 AU 소급 폐지).
+
+### Course Catalog
+
+CAIS SQLite DB (`references/kaist-data/courses.db`, gitignored) — 78,926 rows (2019-2026, all 4 terms).
+Old↔new course code mapping built in. Generated runtime artifact: `src/domain/generated/course-catalog.generated.json`.
+
+### Known Limitations
+
+- AE 500단위 상호인정 과목은 수동 검토 (자동 판정 불가)
+- ME/EE 심화전공은 "전선 초과분" 모델 — 어떤 과목이든 기본 전공 초과분 인정
+- 주전공 derivation (심화전공 - advanced-major 버킷)은 학과 홈페이지 숫자와 일치하지만 KAIST 공식 공식 아님 (추론)
+- 다른 학과: common-only (요건 미인코딩)
+
+## Adding a New Supported Department
+
+### Prerequisites (domain-first — MUST complete before coding)
+
+1. Identify official KAIST source (department homepage isuyo requirements page or official PDF)
+2. Answer all required domain questions (see DDD Workflow section)
+3. Verify year group boundaries (which admission years have different rules?)
+4. Identify: required course slots (전필), credit buckets (전선), 심화전공 model (`subset_of_전선` or `additional`), secondary major rules (복수전공/부전공)
+
+### Implementation Steps (after domain work is complete)
+
+1. **Create** `references/kaist-data/requirements/[DEPT].requirements.json`
+   - Must include `"$schema": "./schema.json"` at the top
+   - See existing AE/ME/CS/EE files for structure reference
+   - Source provenance must be recorded in `source-provenance.json`
+2. **Register** in `references/kaist-data/requirements/registry.json` — add one entry: `{ "code": "XX", "labelKo": "학과명", "labelShort": "XX" }`
+3. **Add import** in `src/domain/configs/planner.ts` — one `import xxRequirements from ...` line + one entry in `RAW_REQUIREMENTS`
+4. **Run** `npm run generate:depts` — regenerates `src/domain/generated/departments.generated.ts` (updates `SupportedDepartment` type and `DEPARTMENT_LABELS` automatically — no manual type edits needed)
+5. **Write domain-truth tests** in `src/domain/configs/planner.test.ts` — test real rule scenarios, not just code mechanics
+6. **Run** `npx vitest run` and `npx next build` — both must pass
+
+### 심화전공 Models
+
+- `subset_of_전선`: 전선 과목 중 특정 curated list에서 N학점 이상 (AE, CS). `eligibleOldCodes`/`eligibleNewCodes` 또는 `minimumCourseCredits` 기준.
+- `additional`: 기본 전공 초과 N학점 (ME, EE). 어떤 과목이든 필요 전선 학점 초과분.
+
 ## KAIST Data Collection Workflow
 
 ### 1. Collect Bulletin / Department Requirement Sources
@@ -58,7 +109,7 @@ Typical flow:
 5. Select target department.
 6. Record visible document types, labels, and viewer URLs.
 7. Extract `streamdocsId` values from embedded viewer iframes.
-8. Save raw metadata and provenance in `references/kaist-data/raw/`.
+8. Save raw metadata and provenance in `references/kaist-data/requirements/source-provenance.json`.
 
 Verified working behavior:
 
@@ -79,15 +130,6 @@ agent-browser click @e6
 agent-browser snapshot -i
 agent-browser eval "JSON.stringify(Array.from(document.querySelectorAll('iframe')).map(f => f.src), null, 2)"
 ```
-
-Rendered-page extraction note:
-
-- The StreamDocs renderings endpoint can be fetched directly for page images:
-  - `https://pdfviewer.kaist.ac.kr/streamdocs/v4/documents/<streamdocsId>/renderings/<page>?zoom=<n>&jpegQuality=o&renderAnnots=false&increasePrint=false`
-- Observed quirk: the response is currently served as `application/octet-stream` and the first byte of the PNG signature may be corrupted (`01 50 4e 47 ...` instead of `89 50 4e 47 ...`).
-- If using rendered-page extraction, repair the first byte to `0x89` before treating the payload as a PNG.
-- Helper script for this workflow:
-  - `scripts/fetch-streamdocs-rendering.py <url> <output-path>`
 
 Concrete successful navigation cues:
 
